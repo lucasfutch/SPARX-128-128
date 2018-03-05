@@ -1,0 +1,3 @@
+vhdl work "A_function.vhd"
+vhdl work "step_round.vhd"
+vhdl work "step_round_tb.vhd"

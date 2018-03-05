@@ -164,6 +164,6 @@ LAB5:    xsi_size_not_matching(16U, t11, 0);
 extern void work_a_1319322429_3212880686_init()
 {
 	static char *pe[] = {(void *)work_a_1319322429_3212880686_p_0,(void *)work_a_1319322429_3212880686_p_1,(void *)work_a_1319322429_3212880686_p_2};
-	xsi_register_didat("work_a_1319322429_3212880686", "isim/A_function_tb_isim_beh.exe.sim/work/a_1319322429_3212880686.didat");
+	xsi_register_didat("work_a_1319322429_3212880686", "isim/step_round_tb_isim_beh.exe.sim/work/a_1319322429_3212880686.didat");
 	xsi_register_executes(pe);
 }
