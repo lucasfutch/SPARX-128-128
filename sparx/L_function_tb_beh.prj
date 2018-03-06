@@ -1,0 +1,2 @@
+vhdl work "L_function.vhd"
+vhdl work "L_function_tb.vhd"
