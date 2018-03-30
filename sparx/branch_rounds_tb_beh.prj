@@ -1,0 +1,6 @@
+vhdl work "A_function.vhd"
+vhdl work "step_round.vhd"
+vhdl work "L_function.vhd"
+vhdl work "branch_round.vhd"
+vhdl work "branch_rounds.vhd"
+vhdl work "branch_rounds_tb.vhd"
