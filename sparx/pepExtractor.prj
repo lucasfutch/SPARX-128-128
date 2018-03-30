@@ -1,1 +1,3 @@
-work	"L_function.vhd"
+work	"A_function.vhd"
+work	"branch_round.vhd"
+work	"step_round.vhd"

@@ -57,7 +57,6 @@ begin
 	x0_mid <= x0_in XOR key0;
 	x1_mid <= x1_in XOR key1;
 	
-	--A_comp : A_function PORT MAP(x0_in XOR key0, x1_in XOR key1, x0_afterA, x1_afterA);
 	A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
 
 	x0_out <= x0_afterA;

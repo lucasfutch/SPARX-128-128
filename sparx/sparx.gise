@@ -44,6 +44,11 @@
     <transform xil_pn:end_ts="1520365391" xil_pn:in_ck="2806283161037118931" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1520365391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="A_function.vhd"/>
       <outfile xil_pn:name="A_function_tb.vhd"/>
       <outfile xil_pn:name="L_function.vhd"/>
@@ -66,6 +71,11 @@
     <transform xil_pn:end_ts="1520365391" xil_pn:in_ck="2806283161037118931" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1520365391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="A_function.vhd"/>
       <outfile xil_pn:name="A_function_tb.vhd"/>
       <outfile xil_pn:name="L_function.vhd"/>
@@ -76,10 +86,15 @@
     <transform xil_pn:end_ts="1520365393" xil_pn:in_ck="2806283161037118931" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-98814143204085480" xil_pn:start_ts="1520365391">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1520365113" xil_pn:in_ck="-3133756972697505882" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6303348002583893061" xil_pn:start_ts="1520365113">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="L_function_tb_isim_beh.wdb"/>
