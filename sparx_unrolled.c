@@ -172,16 +172,16 @@ void K_perm_64_128(uint16_t * k, uint16_t c)
 {
     uint16_t tmp_0, tmp_1, i;
     /* Misty-like transformation */
-    A(k+0, k+1);
+    A(k + 0, k + 1);
     k[2] += k[0];
     k[3] += k[1];
     k[7] += c;
     /* Branch rotation */
     tmp_0 = k[6];
     tmp_1 = k[7];
-    for (i=7 ; i>=2 ; i--)
+    for (i = 7 ; i >= 2 ; i--)
     {
-        k[i] = k[i-2];
+        k[i] = k[i - 2];
     }
     k[0] = tmp_0;
     k[1] = tmp_1;
@@ -191,18 +191,18 @@ void K_perm_128_128(uint16_t * k, uint16_t c)
 {
     uint16_t tmp_0, tmp_1, i;
     /* Misty-like transformation */
-    A(k+0, k+1);
+    A(k + 0, k + 1);
     k[2] += k[0];
     k[3] += k[1];
-    A(k+4, k+5);
+    A(k + 4, k + 5);
     k[6] += k[4];
     k[7] += k[5] + c;
     /* Branch rotation */
     tmp_0 = k[6];
     tmp_1 = k[7];
-    for (i=7 ; i>=2 ; i--)
+    for (i = 7 ; i >= 2 ; i--)
     {
-        k[i] = k[i-2];
+        k[i] = k[i - 2];
     }
     k[0] = tmp_0;
     k[1] = tmp_1;
@@ -213,22 +213,22 @@ void K_perm_128_256(uint16_t * k, uint16_t c)
 {
     uint16_t tmp[6], i;
     /* Misty-like transformation */
-    A(k+0, k+1);
+    A(k + 0, k + 1);
     k[2] += k[0];
     k[3] += k[1];
-    A(k+8, k+9);
+    A(k + 8, k + 9);
     k[10] += k[8];
     k[11] += k[9] + c;
     /* Branch rotation */
-    for (i=0 ; i<6 ; i++)
+    for (i = 0 ; i < 6 ; i++)
     {
-        tmp[i] = k[10+i];
+        tmp[i] = k[10 + i];
     }
-    for (i=15 ; i>=6 ; i--)
+    for (i = 15 ; i >= 6 ; i--)
     {
-        k[i] = k[i-6];
+        k[i] = k[i - 6];
     }
-    for (i=0 ; i<6 ; i++)
+    for (i = 0 ; i < 6 ; i++)
     {
         k[i] = tmp[i];
     }
@@ -237,12 +237,12 @@ void K_perm_128_256(uint16_t * k, uint16_t c)
 
 /* Takes a 128 bit master key and turns it into 2*(N_STEPS+1) subkeys
  * of 96 bits */
-void key_schedule(uint16_t subkeys[][2*ROUNDS_PER_STEPS], uint16_t * master_key)
+void key_schedule(uint16_t subkeys[][8], uint16_t * master_key)
 {
     uint8_t c, i;
-    for (c=0 ; c<(N_BRANCHES*N_STEPS+1) ; c++)
+    for (c = 0 ; c < (33) ; c++)
     {
-        for (i=0 ; i<2*ROUNDS_PER_STEPS ; i++)
+        for (i = 0 ; i < 8 ; i++)
         {
             subkeys[c][i] = master_key[i];
         }
@@ -254,60 +254,60 @@ void key_schedule(uint16_t subkeys[][2*ROUNDS_PER_STEPS], uint16_t * master_key)
 /* !SECTION! Encryption and decryption */
 /* =================================== */
 
-void sparx_encrypt(uint16_t * x, uint16_t k[][2*ROUNDS_PER_STEPS])
+void sparx_encrypt(uint16_t * x, uint16_t k[][8])
 {
     uint8_t s, r, b;
 
-    s=0; b=0; r=0;
-    for (s=0 ; s<N_STEPS ; s++)
+    s = 0; b = 0; r = 0;
+    for (s = 0 ; s < 8 ; s++)
     {
-        for (b=0 ; b<4 ; b++)
+        for (b = 0 ; b < 4 ; b++)
         {
             
-            x[2*b] ^= k[4*s + b][0]
-            x[2*b+1] ^= k[4*s + b][1];
-            A(x + 2*b, x + 2*b+1);
+            x[2 * b]     ^= k[4 * s + b][0]
+            x[2 * b + 1] ^= k[4 * s + b][1];
+            A(x + 2 * b, x + 2 * b + 1);
 
-            x[2*b] ^= k[4*s + b][2]
-            x[2*b+1] ^= k[4*s + b][3];
-            A(x + 2*b, x + 2*b+1);
+            x[2 * b]     ^= k[4 * s + b][2]
+            x[2 * b + 1] ^= k[4 * s + b][3];
+            A(x + 2 * b, x + 2 * b+1);
 
-            x[2*b] ^= k[4*s + b][4]
-            x[2*b+1] ^= k[4*s + b][5];
-            A(x + 2*b, x + 2*b+1);
+            x[2 * b]     ^= k[4 * s + b][4]
+            x[2 * b + 1] ^= k[4 * s + b][5];
+            A(x + 2 * b, x + 2 * b + 1);
 
-            x[2*b] ^= k[4*s + b][6]
-            x[2*b+1] ^= k[4*s + b][7];
-            A(x + 2*b, x + 2*b+1);
+            x[2 * b]     ^= k[4 * s + b][6]
+            x[2 * b + 1] ^= k[4 * s + b][7];
+            A(x + 2 * b, x + 2 * b + 1);
         }
         L(x);
     }
-    for (b=0 ; b<N_BRANCHES ; b++)
+    for (b = 0 ; b < 4 ; b++)
     {
-        x[2*b  ] ^= k[N_BRANCHES*N_STEPS][2*b  ];
-        x[2*b+1] ^= k[N_BRANCHES*N_STEPS][2*b+1];
+        x[2 * b  ]   ^= k[32][2 * b  ];
+        x[2 * b + 1] ^= k[32][2 * b + 1];
     }
 }
 
 
-void sparx_decrypt(uint16_t * x, uint16_t k[][2*ROUNDS_PER_STEPS])
+void sparx_decrypt(uint16_t * x, uint16_t k[][8])
 {
     int8_t s, r, b;
 
-    for (b=0 ; b<N_BRANCHES ; b++)
+    for (b=0 ; b<4 ; b++)
     {
-        x[2*b  ] ^= k[N_BRANCHES*N_STEPS][2*b  ];
-        x[2*b+1] ^= k[N_BRANCHES*N_STEPS][2*b+1];
+        x[2 * b  ]   ^= k[32][2 * b  ];
+        x[2 * b + 1] ^= k[32][2 * b + 1];
     }
-    for (s=N_STEPS-1 ; s >= 0 ; s--)
+    for (s = 7 ; s >= 0 ; s--)
     {
         L_inv(x);
-        for (b=0 ; b<N_BRANCHES ; b++)
-            for (r=ROUNDS_PER_STEPS-1 ; r >= 0 ; r--)
+        for (b = 0 ; b < 4 ; b++)
+            for (r = 3 ; r >= 0 ; r--)
             {
-                A_inv(x + 2*b, x + 2*b+1);
-                x[2*b  ] ^= k[N_BRANCHES*s + b][2*r    ];
-                x[2*b+1] ^= k[N_BRANCHES*s + b][2*r + 1];
+                A_inv(x + 2 * b, x + 2 * b + 1);
+                x[2 * b  ]   ^= k[4 * s + b][2 * r    ];
+                x[2 * b + 1] ^= k[4 * s + b][2 * r + 1];
             }
     }
 }
@@ -375,20 +375,20 @@ void initialize_test_vectors(uint16_t * x, uint16_t * master_key)
 
 
     /* Set test vectors */
-    for (i=0 ; i<2*K_SIZE ; i++)
+    for (i=0 ; i<2*4 ; i++)
     {
         master_key[i] = p_key[i];
     }
-    for (i=0 ; i<2*N_BRANCHES ; i++)
+    for (i=0 ; i<2*4 ; i++)
     {
         x[i] = p_plaintext[i];
     }
 
 
     printf("steps=%d, rounds/steps=%d, block=32*%d\n\n",
-           N_STEPS,
-           ROUNDS_PER_STEPS,
-           N_BRANCHES);
+           8,
+           4,
+           4);
 }
 
 
@@ -429,7 +429,7 @@ void check_test_vectors(uint16_t * x, uint8_t op)
         p_tv = p_plaintext;
     }
 
-    for (i=0 ; i<2*N_BRANCHES ; i++)
+    for (i=0 ; i<2*4 ; i++)
     {
         if (x[i] != p_tv[i])
         {
@@ -448,9 +448,9 @@ void check_test_vectors(uint16_t * x, uint8_t op)
 int main()
 {
     uint16_t
-        x[2*N_BRANCHES],
-        master_key[2*K_SIZE],
-        k[N_BRANCHES*N_STEPS+1][2*ROUNDS_PER_STEPS] = {{0}};
+        x[8],
+        master_key[8],
+        k[33][8] = {{0}};
     uint8_t i, j;
 
 
@@ -458,23 +458,23 @@ int main()
 
 
     printf("master = ");
-    for (i=0 ; i<2*K_SIZE ; i++)
+    for (i = 0 ; i < 8 ; i++)
     {
         printf("%04x ", master_key[i]);
     }
 
 
     key_schedule(k, master_key);
-    for (i=0 ; i<N_BRANCHES*N_STEPS+1 ; i++)
+    for (i = 0 ; i < 33 ; i++)
     {
         printf("\nk^{%2d} = ", i);
-        for (j=0 ; j<2*ROUNDS_PER_STEPS ; j++)
+        for (j = 0 ; j < 8 ; j++)
             printf("%04x ", k[i][j]);
     }
 
 
     printf("\n\nplaintext  = ");
-    for (i=0 ; i<2*N_BRANCHES ; i++)
+    for (i = 0 ; i < 8 ; i++)
     {
         printf("%04x ", x[i]);
     }
@@ -482,7 +482,7 @@ int main()
 
     sparx_encrypt(x, k);
     printf("\nciphertext = ");
-    for (i=0 ; i<2*N_BRANCHES ; i++)
+    for (i = 0 ; i < 8 ; i++)
     {
         printf("%04x ", x[i]);
     }
@@ -491,7 +491,7 @@ int main()
 
     sparx_decrypt(x, k);
     printf("\ndecryption = ");
-    for (i=0 ; i<2*N_BRANCHES ; i++)
+    for (i = 0 ; i < 8 ; i++)
     {
         printf("%04x ", x[i]);
     }

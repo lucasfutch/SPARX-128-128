@@ -132,6 +132,13 @@ void L_2_inv(uint16_t * x)
 
 void L_4(uint16_t * x)
 {
+    uint8_t i;
+    printf("\n L_function BEF: ");
+    for (i=0 ; i<8 ; i++)
+    {
+        printf("%04x ", x[i]);
+    }
+
     uint16_t tmp = x[0] ^ x[1] ^ x[2] ^ x[3];
     tmp = ROTL(tmp, 8);
 
@@ -144,6 +151,12 @@ void L_4(uint16_t * x)
     SWAP(x[1], x[5]);
     SWAP(x[2], x[6]);
     SWAP(x[3], x[7]);
+
+    printf("\n L_function AFT: ");
+    for (i=0 ; i<8 ; i++)
+    {
+        printf("%04x ", x[i]);
+    }
 }
 
 void L_4_inv(uint16_t * x)
@@ -265,29 +278,29 @@ void sparx_encrypt(uint16_t * x, uint16_t k[][2*ROUNDS_PER_STEPS])
         {
             for (r=0 ; r<ROUNDS_PER_STEPS ; r++)
             {
-                printf("\n BEFORE pt 1: ");
-                printf("%04x ", x[2*b]);
-                printf("%04x ", k[N_BRANCHES*s + b][2*r    ]);
+                // printf("\n BEFORE pt 1: ");
+                // printf("%04x ", x[2*b]);
+                // printf("%04x ", k[N_BRANCHES*s + b][2*r    ]);
 
                 x[2*b  ] ^= k[N_BRANCHES*s + b][2*r    ];
 
-                printf("\n AFTER pt 1: ");
-                printf("%04x ", x[2*b]);
+                // printf("\n AFTER pt 1: ");
+                // printf("%04x ", x[2*b]);
 
-                printf("\n BEFORE pt 2: ");
-                printf("%04x ", x[2*b+1]);
-                printf("%04x ", k[N_BRANCHES*s + b][2*r + 1]);
+                // printf("\n BEFORE pt 2: ");
+                // printf("%04x ", x[2*b+1]);
+                // printf("%04x ", k[N_BRANCHES*s + b][2*r + 1]);
 
                 x[2*b+1] ^= k[N_BRANCHES*s + b][2*r + 1];
 
-                printf("\n AFTER pt 2: ");
-                printf("%04x ", x[2*b]);
+                // printf("\n AFTER pt 2: ");
+                // printf("%04x ", x[2*b]);
 
                 A(x + 2*b, x + 2*b+1);
 
-                printf("\n AFTER A FUNCTION: ");
-                printf("%04x ", x[2*b]);
-                printf("%04x ", x[2*b+1]);
+                // printf("\n AFTER A FUNCTION: ");
+                // printf("%04x ", x[2*b]);
+                // printf("%04x ", x[2*b+1]);
             }
         }
         L(x);
