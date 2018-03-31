@@ -1,4 +1,2 @@
 work	"A_function.vhd"
-work	"branch_round.vhd"
-work	"branch_rounds.vhd"
-work	"step_round.vhd"
+work	"key_perm.vhd"
