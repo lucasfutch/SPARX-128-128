@@ -7,25 +7,30 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_0 - branch_round - Behavioral</ClosedNode>
+         <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd</ClosedNode>
+         <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_0 - branch_round - Behavioral/step_1 - step_round - Behavioral</ClosedNode>
+         <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_0 - branch_round - Behavioral/step_2 - step_round - Behavioral</ClosedNode>
+         <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_0 - branch_round - Behavioral/step_3 - step_round - Behavioral</ClosedNode>
          <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_1 - branch_round - Behavioral</ClosedNode>
          <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_2 - branch_round - Behavioral</ClosedNode>
          <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd/round_3 - branch_round - Behavioral</ClosedNode>
+         <ClosedNode>/encrypt - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt.vhd</ClosedNode>
+         <ClosedNode>/encrypt - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt.vhd/branch_0 - branch_rounds - Behavioral</ClosedNode>
+         <ClosedNode>/key_perm - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|key_perm.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>branch_rounds - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_rounds.vhd)</SelectedItem>
+         <SelectedItem>encrypt - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000186000000020000000000000000000000000200000064ffffffff000000810000000300000002000001860000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000010e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000010e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>branch_rounds - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_rounds.vhd)</CurrentItem>
+      <CurrentItem>encrypt - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design/Map</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
          <ClosedNode>Implement Design/Translate</ClosedNode>
@@ -34,9 +39,9 @@
       <SelectedItems>
          <SelectedItem></SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e3000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e30000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -69,7 +74,13 @@
          <ClosedNode>/A_function_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|A_function_tb.vhd</ClosedNode>
          <ClosedNode>/L_function_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|L_function_tb.vhd</ClosedNode>
          <ClosedNode>/branch_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_round_tb.vhd</ClosedNode>
+         <ClosedNode>/branch_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_round_tb.vhd/uut - branch_round - Behavioral/step_1 - step_round - Behavioral</ClosedNode>
+         <ClosedNode>/branch_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_round_tb.vhd/uut - branch_round - Behavioral/step_2 - step_round - Behavioral</ClosedNode>
+         <ClosedNode>/branch_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_round_tb.vhd/uut - branch_round - Behavioral/step_3 - step_round - Behavioral</ClosedNode>
          <ClosedNode>/branch_rounds - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds.vhd</ClosedNode>
+         <ClosedNode>/branch_rounds_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds_tb.vhd</ClosedNode>
+         <ClosedNode>/encrypt - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt.vhd</ClosedNode>
+         <ClosedNode>/key_perm_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|key_perm_tb.vhd</ClosedNode>
          <ClosedNode>/step_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|step_round_tb.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -77,7 +88,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000019a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000019a0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>branch_rounds_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_rounds_tb.vhd)</CurrentItem>
    </ItemView>
@@ -108,6 +119,6 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <SourceProcessView>000000ff0000000000000002000000cd0000007801000000050100000002</SourceProcessView>
+   <CurrentView>Behavioral Simulation</CurrentView>
 </Project>

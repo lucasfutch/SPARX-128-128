@@ -62,6 +62,7 @@ signal round_2_x1 : STD_LOGIC_VECTOR(15 downto 0);
 signal round_3_x0 : STD_LOGIC_VECTOR(15 downto 0);
 signal round_3_x1 : STD_LOGIC_VECTOR(15 downto 0);
 
+signal L_value : STD_LOGIC_VECTOR(127 downto 0);
 signal L_out : STD_LOGIC_VECTOR(127 downto 0);
 
 begin
@@ -71,7 +72,8 @@ begin
 	round_2 : branch_round PORT MAP(pt(63 downto 48), pt(47 downto 32), key_2, round_2_x0, round_2_x1);
 	round_3 : branch_round PORT MAP(pt(31 downto 16), pt(15 downto 0), key_3, round_3_x0, round_3_x1);
 
-	L : L_function PORT MAP(round_0_x0 & round_0_x1 & round_1_x0 & round_1_x1 & round_2_x0 & round_2_x1 & round_3_x0 & round_3_x1, L_out);
+	L_value <= round_0_x0 & round_0_x1 & round_1_x0 & round_1_x1 & round_2_x0 & round_2_x1 & round_3_x0 & round_3_x1;
+	L : L_function PORT MAP(L_value, L_out);
 	
 	branches_out <= L_out;
 end Behavioral;

@@ -1,6 +1,0 @@
-[Inputs]
-=key_in[127:0]=
-=c[4:0]=
-[Outputs]
-=key_out[127:0]=
-[BiDir]

@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity key_perm is
     Port ( key_in : in  STD_LOGIC_VECTOR (127 downto 0);
-			  c : in STD_LOGIC_VECTOR (4 downto 0);
+			  c : in STD_LOGIC_VECTOR (2 downto 0);
            key_out : out  STD_LOGIC_VECTOR (127 downto 0));
 end key_perm;
 
@@ -55,19 +55,15 @@ begin
 	A_2 : A_function PORT MAP (key_in(63 downto 48), key_in(47 downto 32), A_out4, A_out5);
 
 	key_out <= (
-	STD_LOGIC_VECTOR(unsigned(A_out4) + unsigned(key_in(31 downto 16))) &   
-	STD_LOGIC_VECTOR(unsigned(A_out5) + unsigned(key_in(15 downto 0)) + unsigned(c)) &
-	A_out0 &
-	A_out1 &
-	STD_LOGIC_VECTOR(unsigned(A_out0) + unsigned(key_in(95 downto 80))) &
-	STD_LOGIC_VECTOR(unsigned(A_out1) + unsigned(key_in(78 downto 64))) &
-	A_out4 &
-	A_out5
-	
-
+		STD_LOGIC_VECTOR(unsigned(A_out4) + unsigned(key_in(31 downto 16))) &   
+		STD_LOGIC_VECTOR(unsigned(A_out5) + unsigned(key_in(15 downto 0)) + unsigned(c)) &
+		A_out0 &
+		A_out1 &
+		STD_LOGIC_VECTOR(unsigned(A_out0) + unsigned(key_in(95 downto 80))) &
+		STD_LOGIC_VECTOR(unsigned(A_out1) + unsigned(key_in(78 downto 64))) &
+		A_out4 &
+		A_out5
 	);
-
-
 
 end Behavioral;
 

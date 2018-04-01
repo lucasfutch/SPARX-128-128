@@ -1,0 +1,8 @@
+vhdl work "A_function.vhd"
+vhdl work "step_round.vhd"
+vhdl work "L_function.vhd"
+vhdl work "key_perm.vhd"
+vhdl work "branch_round.vhd"
+vhdl work "key_schedule.vhd"
+vhdl work "branch_rounds.vhd"
+vhdl work "encrypt.vhd"
