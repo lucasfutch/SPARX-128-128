@@ -13,8 +13,6 @@ Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_rounds
 Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt.vhd" into library work
 Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt_tb.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:746 - "N:/P.20131013/rtf/vhdl/src/ieee/numeric_std.vhd" Line 3314: Range is empty (null range)
-WARNING:HDLCompiler:220 - "N:/P.20131013/rtf/vhdl/src/ieee/numeric_std.vhd" Line 3314: Assignment ignored
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
@@ -31,5 +29,5 @@ Compiling architecture behavior of entity encrypt_tb
 Time Resolution for simulation is 1ps.
 Compiled 20 VHDL Units
 Built simulation executable C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt_tb_isim_beh.exe
-Fuse Memory Usage: 35652 KB
-Fuse CPU Usage: 515 ms
+Fuse Memory Usage: 35640 KB
+Fuse CPU Usage: 1046 ms

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: encrypt.prj
 
@@ -163,13 +163,18 @@ WARNING:Xst:2972 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_schedule
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
-WARNING:Xst:2972 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd" line 77. All outputs of instance <branch_0> of block <branch_rounds> are unconnected in block <encrypt>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd" line 78. All outputs of instance <key_schedule_0> of block <key_schedule> are unconnected in block <encrypt>. Underlying logic will be removed.
 
 Synthesizing Unit <encrypt>.
     Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd".
+    Found 128-bit register for signal <text_state>.
+    Found 128-bit register for signal <key_state>.
+    Found 128-bit register for signal <ct>.
+    Found 3-bit register for signal <round>.
+    Found 3-bit adder for signal <round[2]_GND_4_o_add_0_OUT> created at line 1241.
     Summary:
-	no macro.
+	inferred   1 Adder/Subtractor(s).
+	inferred 387 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 Unit <encrypt> synthesized.
 
 Synthesizing Unit <branch_rounds>.
@@ -209,16 +214,34 @@ WARNING:Xst:653 - Signal <key_1> is used but never assigned. This sourceless sig
 WARNING:Xst:653 - Signal <key_2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <key_3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <keys_ready>.
-    Found 1-bit register for signal <key_round<1>>.
-    Found 1-bit register for signal <key_round<0>>.
+    Found 2-bit register for signal <key_round>.
+    Found 2-bit adder for signal <key_round[1]_GND_10_o_add_4_OUT> created at line 1241.
     Summary:
+	inferred   1 Adder/Subtractor(s).
 	inferred   3 D-type flip-flop(s).
 Unit <key_schedule> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 18
+ 16-bit adder                                          : 16
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 6
+ 1-bit register                                        : 1
+ 128-bit register                                      : 3
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Multiplexers                                         : 3
+ 128-bit 2-to-1 multiplexer                            : 3
+# Xors                                                 : 54
+ 128-bit xor2                                          : 1
+ 16-bit xor2                                           : 48
+ 16-bit xor3                                           : 4
+ 16-bit xor4                                           : 1
+
 =========================================================================
 
 =========================================================================
@@ -226,28 +249,182 @@ Found no macro
 =========================================================================
 
 
+Synthesizing (advanced) Unit <encrypt>.
+The following registers are absorbed into counter <round>: 1 register on signal <round>.
+Unit <encrypt> synthesized (advanced).
+
+Synthesizing (advanced) Unit <key_schedule>.
+The following registers are absorbed into counter <key_round>: 1 register on signal <key_round>.
+Unit <key_schedule> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 16-bit adder                                          : 16
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 385
+ Flip-Flops                                            : 385
+# Multiplexers                                         : 3
+ 128-bit 2-to-1 multiplexer                            : 3
+# Xors                                                 : 54
+ 128-bit xor2                                          : 1
+ 16-bit xor2                                           : 48
+ 16-bit xor3                                           : 4
+ 16-bit xor4                                           : 1
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <key_state_0> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_1> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_2> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_3> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_4> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_5> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_6> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_7> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_8> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_9> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_10> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_11> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_12> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_13> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_14> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_15> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_16> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_17> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_18> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_19> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_20> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_21> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_22> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_23> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_24> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_25> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_26> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_27> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_28> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_29> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_30> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_31> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_32> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_33> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_34> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_35> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_36> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_37> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_38> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_39> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_40> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_41> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_42> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_43> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_44> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_45> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_46> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_47> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_48> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_49> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_50> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_51> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_52> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_53> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_54> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_55> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_56> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_57> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_58> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_59> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_60> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_61> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_62> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_63> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_64> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_65> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_66> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_67> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_68> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_69> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_70> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_71> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_72> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_73> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_74> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_75> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_76> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_77> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_78> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_79> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_80> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_81> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_82> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_83> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_84> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_85> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_86> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_87> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_88> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_89> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_90> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_91> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_92> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_93> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_94> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_95> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_96> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_97> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_98> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_99> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_100> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_101> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_102> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_103> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_104> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_105> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_106> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_107> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_108> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_109> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_110> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_111> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_112> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_113> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_114> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_115> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_116> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_117> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_118> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_119> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_120> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_121> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_122> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_123> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_124> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_125> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_126> of sequential type is unconnected in block <encrypt>.
+WARNING:Xst:2677 - Node <key_state_127> of sequential type is unconnected in block <encrypt>.
 
 Optimizing unit <encrypt> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block encrypt, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block encrypt, actual ratio is 8.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 262
+ Flip-Flops                                            : 262
+
 =========================================================================
 
 =========================================================================
@@ -269,9 +446,24 @@ Top Level Output File Name         : encrypt.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
-#      VCC                         : 1
-# IO Buffers                       : 128
+# BELS                             : 1048
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 81
+#      LUT3                        : 95
+#      LUT4                        : 111
+#      LUT5                        : 100
+#      LUT6                        : 161
+#      MUXCY                       : 240
+#      XORCY                       : 256
+# FlipFlops/Latches                : 262
+#      FDE                         : 256
+#      FDR                         : 3
+#      FDRE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 256
+#      IBUF                        : 128
 #      OBUF                        : 128
 
 Device utilization summary:
@@ -281,19 +473,25 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:             262  out of  18224     1%  
+ Number of Slice LUTs:                  551  out of   9112     6%  
+    Number used as Logic:               551  out of   9112     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:    678
+   Number with an unused Flip Flop:     416  out of    678    61%  
+   Number with an unused LUT:           127  out of    678    18%  
+   Number of fully used LUT-FF pairs:   135  out of    678    19%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                         385
- Number of bonded IOBs:                 128  out of    232    55%  
+ Number of bonded IOBs:                 257  out of    232   110% (*) 
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -313,7 +511,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 262   |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -323,9 +525,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 9.490ns (Maximum Frequency: 105.380MHz)
+   Minimum input arrival time before clock: 4.049ns
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -333,21 +535,121 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.490ns (frequency: 105.380MHz)
+  Total number of paths / destination ports: 77434607 / 527
+-------------------------------------------------------------------------
+Delay:               9.490ns (Levels of Logic = 31)
+  Source:            text_state_64 (FF)
+  Destination:       text_state_72 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: text_state_64 to text_state_72
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.525   0.976  text_state_64 (text_state_64)
+     LUT2:I1->O            1   0.254   0.000  branch_0/round_1/step_0/A/Madd_left_mid_lut<0> (branch_0/round_1/step_0/A/Madd_left_mid_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<0> (branch_0/round_1/step_0/A/Madd_left_mid_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<1> (branch_0/round_1/step_0/A/Madd_left_mid_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<2> (branch_0/round_1/step_0/A/Madd_left_mid_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<3> (branch_0/round_1/step_0/A/Madd_left_mid_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<4> (branch_0/round_1/step_0/A/Madd_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<5> (branch_0/round_1/step_0/A/Madd_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<6> (branch_0/round_1/step_0/A/Madd_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<7> (branch_0/round_1/step_0/A/Madd_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<8> (branch_0/round_1/step_0/A/Madd_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<9> (branch_0/round_1/step_0/A/Madd_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<10> (branch_0/round_1/step_0/A/Madd_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<11> (branch_0/round_1/step_0/A/Madd_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_0/A/Madd_left_mid_cy<12> (branch_0/round_1/step_0/A/Madd_left_mid_cy<12>)
+     XORCY:CI->O           8   0.206   0.944  branch_0/round_1/step_0/A/Madd_left_mid_xor<13> (branch_0/round_1/step_0_x0<13>)
+     LUT3:I2->O            1   0.254   0.000  branch_0/round_1/step_1/A/Madd_left_mid_lut<6> (branch_0/round_1/step_1/A/Madd_left_mid_lut<6>)
+     MUXCY:S->O            1   0.215   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<6> (branch_0/round_1/step_1/A/Madd_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<7> (branch_0/round_1/step_1/A/Madd_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<8> (branch_0/round_1/step_1/A/Madd_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<9> (branch_0/round_1/step_1/A/Madd_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<10> (branch_0/round_1/step_1/A/Madd_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<11> (branch_0/round_1/step_1/A/Madd_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  branch_0/round_1/step_1/A/Madd_left_mid_cy<12> (branch_0/round_1/step_1/A/Madd_left_mid_cy<12>)
+     XORCY:CI->O           8   0.206   0.944  branch_0/round_1/step_1/A/Madd_left_mid_xor<13> (branch_0/round_1/step_1_x0<13>)
+     LUT4:I3->O            1   0.254   0.000  branch_0/round_1/step_2/A/Madd_left_mid_lut<6> (branch_0/round_1/step_2/A/Madd_left_mid_lut<6>)
+     MUXCY:S->O            1   0.215   0.000  branch_0/round_1/step_2/A/Madd_left_mid_cy<6> (branch_0/round_1/step_2/A/Madd_left_mid_cy<6>)
+     XORCY:CI->O           9   0.206   0.976  branch_0/round_1/step_2/A/Madd_left_mid_xor<7> (branch_0/round_1/step_2_x0<7>)
+     LUT5:I4->O            1   0.254   0.000  branch_0/round_1/step_3/A/Madd_left_mid_lut<0> (branch_0/round_1/step_3/A/Madd_left_mid_lut<0>)
+     XORCY:LI->O           7   0.149   0.910  branch_0/round_1/step_3/A/Madd_left_mid_xor<0> (branch_0/round_1_x0<0>)
+     LUT6:I5->O            1   0.254   0.790  Mmux_branch_0_out[127]_pt[127]_mux_7_OUT981_SW0 (N198)
+     LUT6:I4->O            1   0.250   0.000  Mmux_branch_0_out[127]_pt[127]_mux_7_OUT981 (branch_0_out[127]_pt[127]_mux_7_OUT<72>)
+     FDE:D                     0.074          text_state_72
+    ----------------------------------------
+    Total                      9.490ns (3.950ns logic, 5.540ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 143 / 128
+-------------------------------------------------------------------------
+Offset:              4.049ns (Levels of Logic = 3)
+  Source:            pt<81> (PAD)
+  Destination:       text_state_81 (FF)
+  Destination Clock: clk rising
+
+  Data Path: pt<81> to text_state_81
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.181  pt_81_IBUF (pt_81_IBUF)
+     LUT6:I0->O            1   0.254   0.958  Mmux_branch_0_out[127]_pt[127]_mux_7_OUT108_SW1 (N181)
+     LUT4:I0->O            1   0.254   0.000  Mmux_branch_0_out[127]_pt[127]_mux_7_OUT108 (branch_0_out[127]_pt[127]_mux_7_OUT<81>)
+     FDE:D                     0.074          text_state_81
+    ----------------------------------------
+    Total                      4.049ns (1.910ns logic, 2.139ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            ct_127 (FF)
+  Destination:       ct<127> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ct_127 to ct<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  ct_127 (ct_127)
+     OBUF:I->O                 2.912          ct_127_OBUF (ct<127>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.490|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.27 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.69 secs
  
 --> 
 
 Total memory usage is 263088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
+Number of warnings :  143 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

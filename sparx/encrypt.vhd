@@ -33,6 +33,7 @@ entity encrypt is
     Port ( pt : in  STD_LOGIC_VECTOR (127 downto 0);
            key_master : in STD_LOGIC_VECTOR(127 downto 0);
 			  clk : in STD_LOGIC;
+			  en : in STD_LOGIC;
            ct : out  STD_LOGIC_VECTOR (127 downto 0));
 end encrypt;
 
@@ -82,32 +83,32 @@ process(clk)
 begin
 
 	if rising_edge(clk) then
-	
-		if keys_done = '1' then 									-- round keys done
-			round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one
-											
-			if round = "111" then									-- reset round counter
+		if en = '1' then
+		
+			if keys_done = '1' then 									-- round keys done
+				round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
+				if round = "111" then									-- reset round counter
+					round <= "000";
+				end if;
+			else
 				round <= "000";
-			
-			elsif round = "000" then				-- first round gets original values
-				text_state <= pt;
-				key_state <= key_master;
-			
-			else 													 -- next rounds get outputs
-				text_state <= branch_0_out;
-				key_state <= key_3_s;
-			
-				if round = "111" then						-- last round has an xor for ct
-					ct <= text_state xor key_0_s;		
-				else
-					ct <= text_state;
-				end if;	
 			end if;
+			
 		end if;
 	end if;
-	
-	
-			
 end process;
+
+with round select text_state <=
+	pt when "000",
+	branch_0_out when others;
+	
+with round select key_state <= 
+	key_master when "000",
+	key_3_s when others;
+
+with round select ct <=
+	text_state XOR key_0_s when "111",
+	text_state when others;
+
 end Behavioral;
 

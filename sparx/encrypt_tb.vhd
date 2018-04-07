@@ -44,6 +44,7 @@ ARCHITECTURE behavior OF encrypt_tb IS
          pt : IN  std_logic_vector(127 downto 0);
          key_master : IN  std_logic_vector(127 downto 0);
          clk : IN  std_logic;
+			en : IN std_logic;
          ct : OUT  std_logic_vector(127 downto 0)
         );
     END COMPONENT;
@@ -53,6 +54,7 @@ ARCHITECTURE behavior OF encrypt_tb IS
    signal pt : std_logic_vector(127 downto 0) := (others => '0');
    signal key_master : std_logic_vector(127 downto 0) := (others => '0');
    signal clk : std_logic := '0';
+	signal en : std_logic := '0';
 
  	--Outputs
    signal ct : std_logic_vector(127 downto 0);
@@ -67,7 +69,8 @@ BEGIN
           pt => pt,
           key_master => key_master,
           clk => clk,
-          ct => ct
+          ct => ct,
+			 en => en
         );
 
    -- Clock process definitions
@@ -88,8 +91,12 @@ BEGIN
 		
 		pt 		  <= x"0123456789abcdeffedcba9876543210";
 		key_master <= x"00112233445566778899aabbccddeeff";
+		
 
       --wait for clk_period*10;
+		wait for 50 ns;
+		
+		en <= '1';
 
       -- insert stimulus here 
 

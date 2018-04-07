@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity key_perm is
     Port ( key_in : in  STD_LOGIC_VECTOR (127 downto 0);
-			  c : in STD_LOGIC_VECTOR (2 downto 0);
+			  c : in STD_LOGIC_VECTOR (4 downto 0);
            key_out : out  STD_LOGIC_VECTOR (127 downto 0));
 end key_perm;
 

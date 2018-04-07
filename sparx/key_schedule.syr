@@ -1,0 +1,572 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: key_schedule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "key_schedule.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "key_schedule"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : key_schedule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_function.vhd" into library work
+Parsing entity <A_function>.
+Parsing architecture <Behavioral> of entity <a_function>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" into library work
+Parsing entity <key_perm>.
+Parsing architecture <Behavioral> of entity <key_perm>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_schedule.vhd" into library work
+Parsing entity <key_schedule>.
+Parsing architecture <Behavioral> of entity <key_schedule>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <key_schedule> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <key_perm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <A_function> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <key_schedule>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_schedule.vhd".
+    Found 128-bit register for signal <key_1>.
+    Found 128-bit register for signal <key_2>.
+    Found 128-bit register for signal <key_3>.
+    Found 2-bit register for signal <key_round>.
+    Found 1-bit register for signal <keys_ready>.
+    Found 128-bit register for signal <key_0>.
+    Found 2-bit adder for signal <key_round[1]_GND_4_o_add_1_OUT> created at line 1241.
+    Found 5-bit adder for signal <n0041> created at line 101.
+    Found 5-bit adder for signal <c_round> created at line 1241.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 515 D-type flip-flop(s).
+Unit <key_schedule> synthesized.
+
+Synthesizing Unit <key_perm>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd".
+WARNING:Xst:647 - Input <key_in<79:79>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit adder for signal <key_out<127:112>> created at line 58.
+    Found 16-bit adder for signal <n0089> created at line 59.
+    Found 16-bit adder for signal <key_out<111:96>> created at line 59.
+    Found 16-bit adder for signal <key_out<63:48>> created at line 62.
+    Found 16-bit adder for signal <key_out<47:32>> created at line 63.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+Unit <key_perm> synthesized.
+
+Synthesizing Unit <A_function>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_function.vhd".
+    Found 16-bit adder for signal <left_mid> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <A_function> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 31
+ 16-bit adder                                          : 28
+ 2-bit adder                                           : 1
+ 5-bit adder                                           : 2
+# Registers                                            : 6
+ 1-bit register                                        : 1
+ 128-bit register                                      : 4
+ 2-bit register                                        : 1
+# Xors                                                 : 8
+ 16-bit xor2                                           : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <key_schedule>.
+The following registers are absorbed into counter <key_round>: 1 register on signal <key_round>.
+Unit <key_schedule> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 29
+ 16-bit adder                                          : 28
+ 5-bit adder carry in                                  : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 513
+ Flip-Flops                                            : 513
+# Xors                                                 : 8
+ 16-bit xor2                                           : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <key_schedule> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block key_schedule, actual ratio is 7.
+FlipFlop key_1_in_127 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_126 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_125 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_124 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_123 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_122 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_121 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_120 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_119 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_118 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_117 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_116 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_115 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_114 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_113 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_112 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_95 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_94 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_93 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_92 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_91 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_90 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_89 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_88 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_87 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_86 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_85 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_84 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_83 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_82 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_81 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_80 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_78 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_77 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_76 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_75 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_74 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_73 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_72 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_71 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_70 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_69 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_68 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_67 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_66 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_65 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_64 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_63 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_62 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_61 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_60 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_59 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_58 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_57 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_56 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_55 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_54 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_53 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_52 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_51 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_50 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_49 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_48 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_47 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_46 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_45 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_44 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_43 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_42 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_41 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_40 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_39 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_38 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_37 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_36 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_35 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_34 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_33 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_32 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop key_1_in_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 626
+ Flip-Flops                                            : 626
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : key_schedule.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1327
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 434
+#      LUT3                        : 121
+#      LUT4                        : 25
+#      LUT5                        : 1
+#      MUXCY                       : 360
+#      XORCY                       : 384
+# FlipFlops/Latches                : 626
+#      FD                          : 624
+#      FDR                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 643
+#      IBUF                        : 130
+#      OBUF                        : 513
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             514  out of  18224     2%  
+ Number of Slice LUTs:                  582  out of   9112     6%  
+    Number used as Logic:               582  out of   9112     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    659
+   Number with an unused Flip Flop:     145  out of    659    22%  
+   Number with an unused LUT:            77  out of    659    11%  
+   Number of fully used LUT-FF pairs:   437  out of    659    66%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         645
+ Number of bonded IOBs:                 644  out of    232   277% (*) 
+    IOB Flip Flops/Latches:             112
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 626   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.989ns (Maximum Frequency: 166.973MHz)
+   Minimum input arrival time before clock: 6.928ns
+   Maximum output required time after clock: 4.277ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.989ns (frequency: 166.973MHz)
+  Total number of paths / destination ports: 60093 / 405
+-------------------------------------------------------------------------
+Delay:               5.989ns (Levels of Logic = 20)
+  Source:            key_2_in_55 (FF)
+  Destination:       key_3_in_111 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: key_2_in_55 to key_3_in_111
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.834  key_2_in_55 (key_2_in_55)
+     LUT2:I0->O            1   0.250   0.000  new_key_2/A_2/Madd_left_mid_lut<0> (new_key_2/A_2/Madd_left_mid_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  new_key_2/A_2/Madd_left_mid_cy<0> (new_key_2/A_2/Madd_left_mid_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/A_2/Madd_left_mid_cy<1> (new_key_2/A_2/Madd_left_mid_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/A_2/Madd_left_mid_cy<2> (new_key_2/A_2/Madd_left_mid_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/A_2/Madd_left_mid_cy<3> (new_key_2/A_2/Madd_left_mid_cy<3>)
+     XORCY:CI->O           3   0.206   0.766  new_key_2/A_2/Madd_left_mid_xor<4> (key_2_out<20>)
+     LUT2:I1->O            3   0.254   0.994  new_key_2/A_2/Mxor_right_out_4_xo<0>1 (key_2_out<4>)
+     LUT3:I0->O            1   0.235   0.682  new_key_2/Madd_key_out<111:96>4 (new_key_2/Madd_key_out<111:96>4)
+     LUT3:I2->O            1   0.254   0.000  new_key_2/Madd_key_out<111:96>_lut<0>5 (new_key_2/Madd_key_out<111:96>_lut<0>5)
+     MUXCY:S->O            1   0.215   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_4 (new_key_2/Madd_key_out<111:96>_cy<0>5)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_5 (new_key_2/Madd_key_out<111:96>_cy<0>6)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_6 (new_key_2/Madd_key_out<111:96>_cy<0>7)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_7 (new_key_2/Madd_key_out<111:96>_cy<0>8)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_8 (new_key_2/Madd_key_out<111:96>_cy<0>9)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_9 (new_key_2/Madd_key_out<111:96>_cy<0>10)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_10 (new_key_2/Madd_key_out<111:96>_cy<0>11)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_11 (new_key_2/Madd_key_out<111:96>_cy<0>12)
+     MUXCY:CI->O           1   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_12 (new_key_2/Madd_key_out<111:96>_cy<0>13)
+     MUXCY:CI->O           0   0.023   0.000  new_key_2/Madd_key_out<111:96>_cy<0>_13 (new_key_2/Madd_key_out<111:96>_cy<0>14)
+     XORCY:CI->O           1   0.206   0.000  new_key_2/Madd_key_out<111:96>_xor<0>_14 (key_2_out<111>)
+     FD:D                      0.074          key_3_in_111
+    ----------------------------------------
+    Total                      5.989ns (2.713ns logic, 3.276ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 33399 / 281
+-------------------------------------------------------------------------
+Offset:              6.928ns (Levels of Logic = 21)
+  Source:            key_master<55> (PAD)
+  Destination:       key_1_in_111 (FF)
+  Destination Clock: clk rising
+
+  Data Path: key_master<55> to key_1_in_111
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.790  key_master_55_IBUF (key_master_55_IBUF)
+     LUT2:I0->O            1   0.250   0.000  new_key_0/A_2/Madd_left_mid_lut<0> (new_key_0/A_2/Madd_left_mid_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  new_key_0/A_2/Madd_left_mid_cy<0> (new_key_0/A_2/Madd_left_mid_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/A_2/Madd_left_mid_cy<1> (new_key_0/A_2/Madd_left_mid_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/A_2/Madd_left_mid_cy<2> (new_key_0/A_2/Madd_left_mid_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/A_2/Madd_left_mid_cy<3> (new_key_0/A_2/Madd_left_mid_cy<3>)
+     XORCY:CI->O           4   0.206   0.912  new_key_0/A_2/Madd_left_mid_xor<4> (key_0_out<20>)
+     LUT2:I0->O            4   0.250   1.032  new_key_0/A_2/Mxor_right_out_4_xo<0>1 (key_0_out<4>)
+     LUT3:I0->O            1   0.235   0.682  new_key_0/Madd_key_out<111:96>4 (new_key_0/Madd_key_out<111:96>4)
+     LUT3:I2->O            1   0.254   0.000  new_key_0/Madd_key_out<111:96>_lut<0>5 (new_key_0/Madd_key_out<111:96>_lut<0>5)
+     MUXCY:S->O            1   0.215   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_4 (new_key_0/Madd_key_out<111:96>_cy<0>5)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_5 (new_key_0/Madd_key_out<111:96>_cy<0>6)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_6 (new_key_0/Madd_key_out<111:96>_cy<0>7)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_7 (new_key_0/Madd_key_out<111:96>_cy<0>8)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_8 (new_key_0/Madd_key_out<111:96>_cy<0>9)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_9 (new_key_0/Madd_key_out<111:96>_cy<0>10)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_10 (new_key_0/Madd_key_out<111:96>_cy<0>11)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_11 (new_key_0/Madd_key_out<111:96>_cy<0>12)
+     MUXCY:CI->O           1   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_12 (new_key_0/Madd_key_out<111:96>_cy<0>13)
+     MUXCY:CI->O           0   0.023   0.000  new_key_0/Madd_key_out<111:96>_cy<0>_13 (new_key_0/Madd_key_out<111:96>_cy<0>14)
+     XORCY:CI->O           1   0.206   0.000  new_key_0/Madd_key_out<111:96>_xor<0>_14 (key_0_out<111>)
+     FD:D                      0.074          key_1_in_111
+    ----------------------------------------
+    Total                      6.928ns (3.512ns logic, 3.416ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 513 / 513
+-------------------------------------------------------------------------
+Offset:              4.277ns (Levels of Logic = 1)
+  Source:            key_2_in_46 (FF)
+  Destination:       key_1<46> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: key_2_in_46 to key_1<46>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.525   0.840  key_2_in_46 (key_2_in_46)
+     OBUF:I->O                 2.912          key_1_46_OBUF (key_1<46>)
+    ----------------------------------------
+    Total                      4.277ns (3.437ns logic, 0.840ns route)
+                                       (80.4% logic, 19.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.989|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.89 secs
+ 
+--> 
+
+Total memory usage is 263088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

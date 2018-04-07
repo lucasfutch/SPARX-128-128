@@ -45,7 +45,7 @@ architecture Behavioral of key_schedule is
 
 component key_perm is
     Port ( key_in : in  STD_LOGIC_VECTOR (127 downto 0);
-			  c : in STD_LOGIC_VECTOR (2 downto 0);
+			  c : in STD_LOGIC_VECTOR (4 downto 0);
            key_out : out  STD_LOGIC_VECTOR (127 downto 0));
 end component key_perm;
 
@@ -53,32 +53,32 @@ signal key_0_out : STD_LOGIC_VECTOR(127 downto 0);
 signal key_1_out : STD_LOGIC_VECTOR(127 downto 0);
 signal key_2_out : STD_LOGIC_VECTOR(127 downto 0);
 signal key_3_out : STD_LOGIC_VECTOR(127 downto 0);
+signal key_3_out_register : STD_LOGIC_VECTOR(127 downto 0);
 
 signal key_1_in : STD_LOGIC_VECTOR(127 downto 0);
 signal key_2_in : STD_LOGIC_VECTOR(127 downto 0);
 signal key_3_in : STD_LOGIC_VECTOR(127 downto 0);
 
 signal key_round : STD_LOGIC_VECTOR(1 downto 0) := "00";
-
-signal round_1 : STD_LOGIC_VECTOR(2 downto 0) := STD_LOGIC_VECTOR(unsigned(round) + 1);
-signal round_2 : STD_LOGIC_VECTOR(2 downto 0) := STD_LOGIC_VECTOR(unsigned(round_1) + 1);
-signal round_3 : STD_LOGIC_VECTOR(2 downto 0) := STD_LOGIC_VECTOR(unsigned(round_2) + 1);
+signal c_round : STD_LOGIC_VECTOR(4 downto 0) := "00000";
 
 begin
-new_key_0 : key_perm PORT MAP(key_master, round, key_0_out);
-new_key_1 : key_perm PORT MAP(key_1_in, round_1, key_1_out);
-new_key_2 : key_perm PORT MAP(key_2_in, round_2, key_2_out);
-new_key_3 : key_perm PORT MAP(key_3_in, round_3, key_3_out);
+new_key_0 : key_perm PORT MAP(key_master, c_round, key_0_out);
+new_key_1 : key_perm PORT MAP(key_1_in, c_round, key_1_out);
+new_key_2 : key_perm PORT MAP(key_2_in, c_round, key_2_out);
+new_key_3 : key_perm PORT MAP(key_3_in, c_round, key_3_out);
 
 key_schedule_process:
 process(clk)
 begin
 	
-	key_1_in <= key_0_out;
-	key_2_in <= key_1_out;
-	key_3_in <= key_2_out;
 	
 	if rising_edge(clk) then
+	
+		key_1_in <= key_0_out;
+		key_2_in <= key_1_out;
+		key_3_in <= key_2_out;
+		key_3_out_register <= key_3_out;
 		
 		if key_round = "11" then
 			key_round <= "00";
@@ -90,5 +90,12 @@ begin
 	end if;
 		
 end process;
+
+key_0 <= key_1_in;
+key_1 <= key_2_in;
+key_2 <= key_3_in;
+key_3 <= key_3_out_register;
+
+c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
 end Behavioral;
 

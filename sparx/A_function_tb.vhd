@@ -71,15 +71,6 @@ BEGIN
           right_out => right_out
         );
 
-   -- Clock process definitions
-   --<clock>_process :process
-   --begin
-	--	<clock> <= '0';
-	--	wait for <clock>_period/2;
-	--	<clock> <= '1';
-	--	wait for <clock>_period/2;
-   --end process;
- 
 
    -- Stimulus process
    stim_proc: process

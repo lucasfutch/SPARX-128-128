@@ -54,11 +54,10 @@ signal x1_afterA : STD_LOGIC_VECTOR(15 downto 0);
 
 
 begin
+	A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
 	x0_mid <= x0_in XOR key0;
 	x1_mid <= x1_in XOR key1;
 	
-	A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
-
 	x0_out <= x0_afterA;
 	x1_out <= x1_afterA;
 	

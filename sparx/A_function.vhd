@@ -42,10 +42,10 @@ signal left_mid : STD_LOGIC_VECTOR(15 downto 0);
 
 begin
 	
-	left_mid <= STD_LOGIC_VECTOR(rotate_left(unsigned(left_in), 9) + unsigned(right_in)); 
-
+	--left_mid <= STD_LOGIC_VECTOR(rotate_left(unsigned(left_in), 9) + unsigned(right_in)); 
+	left_mid <= STD_LOGIC_VECTOR(unsigned(left_in(6 downto 0) & left_in(15 downto 7)) + unsigned(right_in));
 	left_out <= left_mid;
-	right_out <= STD_LOGIC_VECTOR(rotate_left(unsigned(right_in), 2)) XOR left_mid;
-	
+	--right_out <= STD_LOGIC_VECTOR(rotate_left(unsigned(right_in), 2)) XOR left_mid;
+	right_out <= (right_in(13 downto 0) & right_in(15 downto 14)) XOR left_mid;
 end Behavioral;
 
