@@ -76,5 +76,6 @@ begin
 	L : L_function PORT MAP(L_value, L_out);
 	
 	branches_out <= L_out;
+	
 end Behavioral;
 

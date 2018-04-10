@@ -44,7 +44,7 @@ begin
 
 left_mid <= STD_LOGIC_VECTOR(unsigned(left_in(6 downto 0) & left_in(15 downto 7)) + unsigned(right_in));
 
-a_proc: process(left_mid)
+a_process: process(left_mid)
 begin
 	left_out <= left_mid;
 	right_out <= (right_in(13 downto 0) & right_in(15 downto 14)) XOR left_mid;

@@ -47,17 +47,20 @@ begin
 
 tmp <= state(127 downto 112) XOR state (111 downto 96) XOR state(95 downto 80) XOR state(79 downto 64);
 
-L_proc: process(tmp)
+L_process_left_rotate: process(tmp)
 begin
-	--tmp_rot <= STD_LOGIC_VECTOR(rotate_left(unsigned(tmp), 8));
-	tmp_rot <= STD_LOGIC_VECTOR(unsigned(tmp(7 downto 0) & tmp(15 downto 8)));
+	tmp_rot <= tmp(7 downto 0) & tmp(15 downto 8);
+end process;
 
+L_process_xor: process(tmp_rot)
+begin
 	x4_tmp <= state(63 downto 48) XOR state(95 downto 80) XOR tmp_rot;
 	x5_tmp <= state(47 downto 32) XOR state(111 downto 96) XOR tmp_rot;
 	x6_tmp <= state(31 downto 16) XOR state(127 downto 112) XOR tmp_rot;
 	x7_tmp <= state(15 downto 0) XOR state(79 downto 64) XOR tmp_rot;
-	
-	state_out <= x4_tmp & x5_tmp & x6_tmp & x7_tmp & state(127 downto 112) & state(111 downto 96) & state(95 downto 80) & state(79 downto 64);
 end process;
+
+state_out <= x4_tmp & x5_tmp & x6_tmp & x7_tmp & state(127 downto 112) & state(111 downto 96) & state(95 downto 80) & state(79 downto 64);
+
 end Behavioral;
 

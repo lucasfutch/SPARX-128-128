@@ -66,11 +66,10 @@ step_1 : step_round PORT MAP( step_0_x0, step_0_x1, key(95 downto 80), 	key(79 d
 step_2 : step_round PORT MAP( step_1_x0, step_1_x1, key(63 downto 48), 	key(47 downto 32),  step_2_x0, step_2_x1 );
 step_3 : step_round PORT MAP( step_2_x0, step_2_x1, key(31 downto 16), 	key(15 downto 0),   step_3_x0, step_3_x1 );
 
---branch_round_proc: process(step_0_x0, step_0_x1, step_1_x0, step_1_x1, step_2_x0, step_2_x1, step_3_x0, step_3_x1)
-branch_round_proc: process(step_3_x0, step_3_x1)
+branch_round_process: process(step_3_x0, step_3_x1)
 begin
 	pt_A_out <= step_3_x0;
 	pt_B_out <= step_3_x1;
 end process;
-end Behavioral;
 
+end Behavioral;

@@ -56,7 +56,7 @@ begin
 
 A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
 	
-step_round_proc: process(x0_in, x1_in, key0, key1, x0_afterA, x1_afterA)
+step_round_process: process(x0_in, x1_in, key0, key1, x0_afterA, x1_afterA)
 begin
 
 	x0_mid <= x0_in XOR key0;

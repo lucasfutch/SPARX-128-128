@@ -78,37 +78,48 @@ begin
 branch_0 : branch_rounds PORT MAP(text_state, key_0_s, key_1_s, key_2_s, key_3_s, branch_0_out);
 key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, key_0_s, key_1_s, key_2_s, key_3_s, keys_done);
 
-encryption_process: process(clk)
+encryption_process_round_count: process(clk)
 begin
 
 	if rising_edge(clk) then
 		if en = '1' then
-		
 			if keys_done = '1' then 									-- round keys done
 				round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
 				if round = "111" then									-- reset round counter
 					round <= "000";
 				end if;
-			else
-				round <= "000";
 			end if;
-			
 		end if;
 	end if;
 	
 end process;
 
-with round select text_state <=
-	pt when "000",
-	branch_0_out when others;
-	
-with round select key_state <= 
-	key_master when "000",
-	key_3_s when others;
+encryption_process_signal_select: process(round)
+begin
 
-with round select ct <=
-	text_state XOR key_0_s when "111",
-	text_state when others;
+	if round = "000" then
+		text_state <= pt;
+		key_state <= key_master;
+	elsif round = "111" then
+		ct <= text_state XOR key_0_s;
+	else
+		text_state <= branch_0_out;
+		key_state <= key_3_s;
+		ct <= text_state;
+	end if;
+--
+--with round select text_state <=
+--	pt when "000",
+--	branch_0_out when others;
+--	
+--with round select key_state <= 
+--	key_master when "000",
+--	key_3_s when others;
+--
+--with round select ct <=
+--	text_state XOR key_0_s when "111",
+--	text_state when others;
 
+end process;
 end Behavioral;
 
