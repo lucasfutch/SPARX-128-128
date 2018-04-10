@@ -44,6 +44,7 @@ ARCHITECTURE behavior OF key_shchedule_tb IS
          key_master : IN  std_logic_vector(127 downto 0);
          round : IN  std_logic_vector(2 downto 0);
          clk : IN  std_logic;
+			en : IN std_logic;
          key_0 : OUT  std_logic_vector(127 downto 0);
          key_1 : OUT  std_logic_vector(127 downto 0);
          key_2 : OUT  std_logic_vector(127 downto 0);
@@ -57,6 +58,7 @@ ARCHITECTURE behavior OF key_shchedule_tb IS
    signal key_master : std_logic_vector(127 downto 0) := (others => '0');
    signal round : std_logic_vector(2 downto 0) := (others => '0');
    signal clk : std_logic := '0';
+	signal en : std_logic := '0';
 
  	--Outputs
    signal key_0 : std_logic_vector(127 downto 0);
@@ -75,6 +77,7 @@ BEGIN
           key_master => key_master,
           round => round,
           clk => clk,
+			 en => en,
           key_0 => key_0,
           key_1 => key_1,
           key_2 => key_2,
@@ -96,10 +99,42 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ns;	
 		
-		key_master <= x"897f8871a6c7a4cb603ec6c944f8ff0f";
+		
+      wait for 50 ns;	
+		key_master <= x"00112233445566778899aabbccddeeff";
+		round <= "000";
+		
+		wait for 50 ns;
+		en <= '1';
+		
+		wait for clk_period*4.5;
+		key_master <= x"888157c18783a6452e4a4b10438958ae";
 		round <= "001";
+		
+		wait for clk_period*4.5;
+		key_master <= x"f1b697b253d53ff0c7085814e31a243a";
+		round <= "010";
+		
+		wait for clk_period*4.5;
+		key_master <= x"cf2f73dc63c67241d2b564608c61ccb9";
+		round <= "011";
+		
+		wait for clk_period*4.5;
+		key_master <= x"aa205882dce9c79cd5c0e45ab28f492c";
+		round <= "100";
+		
+		wait for 50 ns;
+		key_master <= x"da2600671cc7967d3f1ed4c70fd1ad3f";
+		round <= "101";	
+
+		wait for 50 ns;
+		key_master <= x"5ce958e00b3a2402bdec8a5d51437fdb";
+		round <= "110";
+
+		wait for 50 ns;
+		key_master <= x"5b5724ff1f2b716bcbcd8be4a05dac5c";
+		round <= "111";		
 
 
       -- insert stimulus here 

@@ -33,6 +33,7 @@ entity key_schedule is
     Port ( key_master : in  STD_LOGIC_VECTOR (127 downto 0);
 			  round : in STD_LOGIC_VECTOR(2 downto 0);
 			  clk : in STD_LOGIC;
+			  en : in STD_LOGIC;
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_1 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_2 : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -62,33 +63,92 @@ signal key_3_in : STD_LOGIC_VECTOR(127 downto 0);
 signal key_round : STD_LOGIC_VECTOR(1 downto 0) := "00";
 signal c_round : STD_LOGIC_VECTOR(4 downto 0) := "00000";
 
+signal add_value : integer range 0 to 4 := 0;
+
 begin
 new_key_0 : key_perm PORT MAP(key_master, c_round, key_0_out);
 new_key_1 : key_perm PORT MAP(key_1_in, c_round, key_1_out);
 new_key_2 : key_perm PORT MAP(key_2_in, c_round, key_2_out);
 new_key_3 : key_perm PORT MAP(key_3_in, c_round, key_3_out);
 
-key_schedule_process:
-process(clk)
+key_1_in <= key_0_out;
+key_2_in <= key_1_out;
+key_3_in <= key_2_out;
+key_3_out_register <= key_3_out;
+			
+key_schedule_process: process(clk)
 begin
-	
-	
 	if rising_edge(clk) then
-	
-		key_1_in <= key_0_out;
-		key_2_in <= key_1_out;
-		key_3_in <= key_2_out;
-		key_3_out_register <= key_3_out;
+		if en = '1' then
+		-- we have to make sure that the c_round being given to each
+		-- key perm is static and does not change until key_round ends
+		-- otherwise the value changes every key_round and affects the 
+		-- entire output since we are not saving
 		
-		if key_round = "11" then
-			key_round <= "00";
-			keys_ready <= '1';
-		else
-			key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-			keys_ready <= '0';
+			
+			
+-- assigned output signals on different rounds
+--			if key_round = "00" then
+--				key_0 <= key_1_in;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "01" then
+--				key_1 <= key_2_in;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "10" then
+--				key_2 <= key_3_in;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "11" then
+--				key_3 <= key_3_out_register;
+--				key_round <= "00";
+--				keys_ready <= '1';
+
+-- assigned intermediate signals on different rounds
+--			if key_round = "00" then
+--				key_1_in <= key_0_out;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "01" then
+--				key_2_in <= key_1_out;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "10" then
+--				key_3_in <= key_2_out;
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
+--			elsif key_round = "11" then
+--				key_3_out_register <= key_3_out;
+--				key_round <= "00";
+--				keys_ready <= '1';
+
+-- normal operation and everything managed at same time
+-- probably the wrong method?
+			if key_round = "11" then
+					key_round <= "00";
+					keys_ready <= '1';
+			else
+				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+				keys_ready <= '0';
+			end if;
 		end if;
 	end if;
 		
+end process;
+
+with key_round select add_value <=
+	1 when "00",
+	2 when "01",
+	3 when "10",
+	4 when "11",
+	0 when others;
+
+key_schedule_round: process(add_value)
+begin
+	--c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
+	c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + add_value);
+
 end process;
 
 key_0 <= key_1_in;
@@ -96,6 +156,5 @@ key_1 <= key_2_in;
 key_2 <= key_3_in;
 key_3 <= key_3_out_register;
 
-c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
 end Behavioral;
 

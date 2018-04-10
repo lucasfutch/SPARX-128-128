@@ -52,6 +52,7 @@ component key_schedule is
     Port ( key_master : in  STD_LOGIC_VECTOR (127 downto 0);
 			  round : in STD_LOGIC_VECTOR(2 downto 0);
 			  clk : in STD_LOGIC;
+			  en : in STD_LOGIC;
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_1 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_2 : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -76,7 +77,7 @@ signal keys_done :STD_LOGIC;
 begin
 
 branch_0 : branch_rounds PORT MAP(text_state, key_0_s, key_1_s, key_2_s, key_3_s, branch_0_out);
-key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, key_0_s, key_1_s, key_2_s, key_3_s, keys_done);
+key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, en, key_0_s, key_1_s, key_2_s, key_3_s, keys_done);
 
 encryption_process_round_count: process(clk)
 begin
@@ -84,9 +85,10 @@ begin
 	if rising_edge(clk) then
 		if en = '1' then
 			if keys_done = '1' then 									-- round keys done
-				round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
 				if round = "111" then									-- reset round counter
 					round <= "000";
+				else
+					round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
 				end if;
 			end if;
 		end if;

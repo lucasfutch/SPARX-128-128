@@ -51,9 +51,14 @@ signal A_out5 : STD_LOGIC_VECTOR(15 downto 0);
 
 begin
 
-	A_1 : A_function PORT MAP (key_in(127 downto 112), key_in(111 downto 96), A_out0, A_out1);
-	A_2 : A_function PORT MAP (key_in(63 downto 48), key_in(47 downto 32), A_out4, A_out5);
+-- some problem with this in the tb
+-- probably stems from c value? cause it works for c = 1
 
+A_1 : A_function PORT MAP (key_in(127 downto 112), key_in(111 downto 96), A_out0, A_out1);
+A_2 : A_function PORT MAP (key_in(63 downto 48), key_in(47 downto 32), A_out4, A_out5);
+
+key_perm_process: process(A_out0, A_out1, A_out4, A_out5)
+begin
 	key_out <= (
 		STD_LOGIC_VECTOR(unsigned(A_out4) + unsigned(key_in(31 downto 16))) &   
 		STD_LOGIC_VECTOR(unsigned(A_out5) + unsigned(key_in(15 downto 0)) + unsigned(c)) &
@@ -64,6 +69,7 @@ begin
 		A_out4 &
 		A_out5
 	);
+end process;
 
 end Behavioral;
 

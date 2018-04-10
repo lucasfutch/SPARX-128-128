@@ -80,9 +80,47 @@ BEGIN
 		
 		key_out_exp := key_out;
 		assert key_out_exp = x"aaa966224433ccff88883376ddcc7722"
-		report "Unexpected Result for key_out" 
+		report "Unexpected Result for key_out with c = 1" 
 		severity error;
-      -- insert stimulus here 
+		
+		wait for 100 ns;
+		key_in <= x"aaa966224433ccff88883376ddcc7722";
+		c <= "00010";
+		
+		key_out_exp := key_out;
+		assert key_out_exp = x"22530083b97721fefdaaeefd4487895f"
+		report "Unexpected Result for key_out with c = 2" 
+		severity error;
+		
+		wait for 100 ns;
+		key_in <= x"22530083b97721fefdaaeefd4487895f";
+		c <= "00011";
+		
+		key_out_exp := key_out;
+		assert key_out_exp = x"897f8871a6c7a4cb603ec6c944f8ff0f"
+		report "Unexpected Result for key_out with c = 3" 
+		severity error;
+		
+		wait for 100 ns;
+		key_in <= x"897f8871a6c7a4cb603ec6c944f8ff0f";
+		c <= "00100";
+		
+		key_out_exp := key_out;
+		assert key_out_exp = x"888157c18783a6452e4a4b10438958ae"
+		report "Unexpected Result for key_out with c = 4" 
+		severity error;
+		
+		wait for 100 ns;
+		key_in <= x"888157c18783a6452e4a4b10438958ae";
+		c <= "00101";
+		
+		key_out_exp := key_out;
+		assert key_out_exp = x"22f54be05ad205d7e255ac1cdf6cf32d"
+		report "Unexpected Result for key_out with c = 5" 
+		severity error;
+		
+		
+		
 
       wait;
    end process;
