@@ -52,15 +52,19 @@ signal x1_mid : STD_LOGIC_VECTOR(15 downto 0);
 signal x0_afterA : STD_LOGIC_VECTOR(15 downto 0);
 signal x1_afterA : STD_LOGIC_VECTOR(15 downto 0);
 
-
 begin
-	A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
+
+A : A_function PORT MAP(x0_mid, x1_mid, x0_afterA, x1_afterA);
+	
+step_round_proc: process(x0_in, x1_in, key0, key1, x0_afterA, x1_afterA)
+begin
+
 	x0_mid <= x0_in XOR key0;
 	x1_mid <= x1_in XOR key1;
 	
 	x0_out <= x0_afterA;
 	x1_out <= x1_afterA;
-	
+end process;
 
 end Behavioral;
 

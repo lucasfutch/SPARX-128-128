@@ -78,8 +78,7 @@ begin
 branch_0 : branch_rounds PORT MAP(text_state, key_0_s, key_1_s, key_2_s, key_3_s, branch_0_out);
 key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, key_0_s, key_1_s, key_2_s, key_3_s, keys_done);
 
-encryption_process:
-process(clk)
+encryption_process: process(clk)
 begin
 
 	if rising_edge(clk) then
@@ -96,6 +95,7 @@ begin
 			
 		end if;
 	end if;
+	
 end process;
 
 with round select text_state <=
