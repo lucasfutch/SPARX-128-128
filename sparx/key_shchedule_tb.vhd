@@ -104,13 +104,9 @@ BEGIN
       wait for 50 ns;	
 		key_master <= x"00112233445566778899aabbccddeeff";
 		round <= "000";
-		
-		wait for 50 ns;
 		en <= '1';
 		
-		
-		
-		wait for clk_period*4.5;
+		wait for clk_period*3.5;
 		key_master <= x"888157c18783a6452e4a4b10438958ae";
 		round <= "001";
 		

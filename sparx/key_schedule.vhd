@@ -80,10 +80,10 @@ key_schedule_process: process(clk)
 begin
 	if rising_edge(clk) then
 		if en = '1' then
-			key_1_in <= key_0_out;
-			key_2_in <= key_1_out;
-			key_3_in <= key_2_out;
-			key_3_out_register <= key_3_out;
+--			key_1_in <= key_0_out;
+--			key_2_in <= key_1_out;
+--			key_3_in <= key_2_out;
+--			key_3_out_register <= key_3_out;
 			
 -- assigned output signals on different rounds
 --			if key_round = "00" then
@@ -103,32 +103,32 @@ begin
 --				key_round <= "00";
 --				keys_ready <= '1';
 
--- assigned intermediate signals on different rounds
---			if key_round = "00" then
---				key_1_in <= key_0_out;
---				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
---				keys_ready <= '0';
---			elsif key_round = "01" then
---				key_2_in <= key_1_out;
---				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
---				keys_ready <= '0';
---			elsif key_round = "10" then
---				key_3_in <= key_2_out;
---				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
---				keys_ready <= '0';
---			elsif key_round = "11" then
---				key_3_out_register <= key_3_out;
---				key_round <= "00";
---				keys_ready <= '1';
+ --assigned intermediate signals on different rounds
+			if key_round = "00" then
+				key_1_in <= key_0_out;
+				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+				keys_ready <= '0';
+			elsif key_round = "01" then
+				key_2_in <= key_1_out;
+				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+				keys_ready <= '0';
+			elsif key_round = "10" then
+				key_3_in <= key_2_out;
+				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+				keys_ready <= '0';
+			elsif key_round = "11" then
+				key_3_out_register <= key_3_out;
+				key_round <= "00";
+				keys_ready <= '1';
 
 -- normal operation and everything managed at same time
 -- probably the wrong method?
-			if key_round = "11" then
-					key_round <= "00";
-					keys_ready <= '1';
-			else
-				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-				keys_ready <= '0';
+--			if key_round = "11" then
+--					key_round <= "00";
+--					keys_ready <= '1';
+--			else
+--				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
+--				keys_ready <= '0';
 			end if;
 		end if;
 	end if;
@@ -142,12 +142,12 @@ with key_round select add_value <=
 	4 when "11",
 	0 when others;
 
-key_schedule_round: process(add_value)
-begin
+--key_schedule_round: process(add_value)
+--begin
 	c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
 	--c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + add_value);
 
-end process;
+--end process;
 
 key_0 <= key_1_in;
 key_1 <= key_2_in;

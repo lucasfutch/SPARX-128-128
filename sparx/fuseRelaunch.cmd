@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_shchedule_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_shchedule_tb_beh.prj" "key_shchedule_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt_tb_beh.prj" "encrypt_tb" 

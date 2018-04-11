@@ -1,4 +1,0 @@
-vhdl work "A_function.vhd"
-vhdl work "key_perm.vhd"
-vhdl work "key_schedule.vhd"
-vhdl work "key_shchedule_tb.vhd"
