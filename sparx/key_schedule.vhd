@@ -71,21 +71,19 @@ new_key_1 : key_perm PORT MAP(key_1_in, c_round, key_1_out);
 new_key_2 : key_perm PORT MAP(key_2_in, c_round, key_2_out);
 new_key_3 : key_perm PORT MAP(key_3_in, c_round, key_3_out);
 
-key_1_in <= key_0_out;
-key_2_in <= key_1_out;
-key_3_in <= key_2_out;
-key_3_out_register <= key_3_out;
-			
+-- we have to make sure that the c_round being given to each
+-- key perm is static and does not change until key_round ends
+-- otherwise the value changes every key_round and affects the 
+-- entire output since we are not saving
+		
 key_schedule_process: process(clk)
 begin
 	if rising_edge(clk) then
 		if en = '1' then
-		-- we have to make sure that the c_round being given to each
-		-- key perm is static and does not change until key_round ends
-		-- otherwise the value changes every key_round and affects the 
-		-- entire output since we are not saving
-		
-			
+			key_1_in <= key_0_out;
+			key_2_in <= key_1_out;
+			key_3_in <= key_2_out;
+			key_3_out_register <= key_3_out;
 			
 -- assigned output signals on different rounds
 --			if key_round = "00" then
@@ -146,8 +144,8 @@ with key_round select add_value <=
 
 key_schedule_round: process(add_value)
 begin
-	--c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
-	c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + add_value);
+	c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + unsigned(key_round) + 1);
+	--c_round <= STD_LOGIC_VECTOR(unsigned(round & "00") + add_value);
 
 end process;
 

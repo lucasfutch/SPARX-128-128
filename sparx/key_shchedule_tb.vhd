@@ -108,19 +108,21 @@ BEGIN
 		wait for 50 ns;
 		en <= '1';
 		
+		
+		
 		wait for clk_period*4.5;
 		key_master <= x"888157c18783a6452e4a4b10438958ae";
 		round <= "001";
 		
-		wait for clk_period*4.5;
+		wait for clk_period*4;
 		key_master <= x"f1b697b253d53ff0c7085814e31a243a";
 		round <= "010";
 		
-		wait for clk_period*4.5;
+		wait for clk_period*4;
 		key_master <= x"cf2f73dc63c67241d2b564608c61ccb9";
 		round <= "011";
 		
-		wait for clk_period*4.5;
+		wait for clk_period*4;
 		key_master <= x"aa205882dce9c79cd5c0e45ab28f492c";
 		round <= "100";
 		

@@ -2,9 +2,9 @@ Command line:
    key_perm_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52490
+     -socket  52640
 
-Tue Apr 10 19:04:18 2018
+Wed Apr 11 12:15:43 2018
 
 
  Elaboration Time: 0.046875 sec
@@ -19,11 +19,11 @@ Tue Apr 10 19:04:18 2018
  Total Processes        : 6
  Total Traceable Variables  : 13
  Total Scalar Nets and Variables : 840
-Total Line Count : 34
+Total Line Count : 38
 
- Total Simulation Time: 0.046875 sec
+ Total Simulation Time: 0.0625 sec
 
  Current Memory Usage: 527.098 Meg
 
-Tue Apr 10 19:04:24 2018
+Wed Apr 11 12:15:49 2018
 

@@ -65,7 +65,7 @@ begin
 		A_out0 &
 		A_out1 &
 		STD_LOGIC_VECTOR(unsigned(A_out0) + unsigned(key_in(95 downto 80))) &
-		STD_LOGIC_VECTOR(unsigned(A_out1) + unsigned(key_in(78 downto 64))) &
+		STD_LOGIC_VECTOR(unsigned(A_out1) + unsigned(key_in(79 downto 64))) &
 		A_out4 &
 		A_out5
 	);
