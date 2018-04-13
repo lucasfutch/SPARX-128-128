@@ -86,11 +86,11 @@ begin
 			elsif key_round = "10" then
 				key_3_in <= key_2_out;
 				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-				keys_ready <= '1';
+				keys_ready <= '0';
 			elsif key_round = "11" then
 				key_3_out_register <= key_3_out;
 				key_round <= "00";
-				keys_ready <= '0';
+				keys_ready <= '1';
 			end if;
 		end if;
 	end if;
