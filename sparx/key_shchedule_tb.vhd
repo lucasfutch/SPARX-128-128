@@ -122,15 +122,15 @@ BEGIN
 		key_master <= x"aa205882dce9c79cd5c0e45ab28f492c";
 		round <= "100";
 		
-		wait for 50 ns;
+		wait for clk_period*4;
 		key_master <= x"da2600671cc7967d3f1ed4c70fd1ad3f";
 		round <= "101";	
 
-		wait for 50 ns;
+		wait for clk_period*4;
 		key_master <= x"5ce958e00b3a2402bdec8a5d51437fdb";
 		round <= "110";
 
-		wait for 50 ns;
+		wait for clk_period*4;
 		key_master <= x"5b5724ff1f2b716bcbcd8be4a05dac5c";
 		round <= "111";		
 

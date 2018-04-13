@@ -99,6 +99,7 @@
          <ClosedNode>/branch_rounds_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds_tb.vhd/uut - branch_rounds - Behavioral/round_2 - branch_round - Behavioral</ClosedNode>
          <ClosedNode>/branch_rounds_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|branch_rounds_tb.vhd/uut - branch_rounds - Behavioral/round_3 - branch_round - Behavioral</ClosedNode>
          <ClosedNode>/encrypt - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt.vhd</ClosedNode>
+         <ClosedNode>/encrypt_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt_tb.vhd/uut - encrypt - Behavioral/branch - branch_rounds - Behavioral</ClosedNode>
          <ClosedNode>/encrypt_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt_tb.vhd/uut - encrypt - Behavioral/branch_0 - branch_rounds - Behavioral</ClosedNode>
          <ClosedNode>/encrypt_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt_tb.vhd/uut - encrypt - Behavioral/key_schedule_0 - key_schedule - Behavioral</ClosedNode>
          <ClosedNode>/encrypt_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|encrypt_tb.vhd/uut - encrypt - Behavioral/key_schedule_0 - key_schedule - Behavioral/new_key_0 - key_perm - Behavioral</ClosedNode>
@@ -111,13 +112,13 @@
          <ClosedNode>/step_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|step_round_tb.vhd/uut - step_round - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>key_perm_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_perm_tb.vhd)</SelectedItem>
+         <SelectedItem>uut - key_schedule - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_schedule.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b8000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>key_perm_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_perm_tb.vhd)</CurrentItem>
+      <CurrentItem>uut - key_schedule - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/key_schedule.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

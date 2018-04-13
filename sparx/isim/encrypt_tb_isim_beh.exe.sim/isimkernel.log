@@ -1,0 +1,29 @@
+Command line:
+   encrypt_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50741
+
+Thu Apr 12 21:41:53 2018
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 543.695 Meg
+
+ Total Signals          : 427
+ Total Nets             : 5486
+ Total Signal Drivers   : 181
+ Total Blocks           : 55
+ Total Primitive Blocks : 27
+ Total Processes        : 89
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 5970
+Total Line Count : 208
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 386.408 Meg
+
+Fri Apr 13 10:30:16 2018
+

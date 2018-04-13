@@ -94,9 +94,11 @@ BEGIN
 		
 
       --wait for clk_period*10;
-		wait for 50 ns;
+		wait for 100 ns;
 		
 		en <= '1';
+		
+		--wait for 100 ns;
 
       -- insert stimulus here 
 
