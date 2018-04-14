@@ -2,9 +2,9 @@ Command line:
    encrypt_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49775
+     -socket  50396
 
-Fri Apr 13 15:26:17 2018
+Sat Apr 14 17:21:02 2018
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.0625 sec

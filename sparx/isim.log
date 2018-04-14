@@ -11,3 +11,6 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+ERROR: at 565 ns(10000): Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round.vhd" Line 66. Please correct this code in order to advance past the current simulation time.
+
+INFO: Simulator is stopped.

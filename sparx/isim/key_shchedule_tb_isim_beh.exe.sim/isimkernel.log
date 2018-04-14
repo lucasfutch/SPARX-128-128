@@ -2,28 +2,28 @@ Command line:
    key_shchedule_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50128
+     -socket  50278
 
-Thu Apr 12 12:44:11 2018
+Sat Apr 14 16:12:13 2018
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 531.272 Meg
+ Current Memory Usage: 535.871 Meg
 
- Total Signals          : 97
- Total Nets             : 2062
- Total Signal Drivers   : 44
+ Total Signals          : 96
+ Total Nets             : 2061
+ Total Signal Drivers   : 43
  Total Blocks           : 16
  Total Primitive Blocks : 10
- Total Processes        : 29
+ Total Processes        : 28
  Total Traceable Variables  : 14
- Total Scalar Nets and Variables : 2546
-Total Line Count : 81
+ Total Scalar Nets and Variables : 2545
+Total Line Count : 78
 
- Total Simulation Time: 0.21875 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 845.844 Meg
+ Current Memory Usage: 850.444 Meg
 
-Thu Apr 12 12:56:33 2018
+Sat Apr 14 16:18:32 2018
 

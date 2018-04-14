@@ -4,7 +4,7 @@ run
 -ifn encrypt.prj
 -ofn encrypt
 -ofmt NGC
--p xc6slx16-2-csg324
+-p xc6slx4-2-tqg144
 -top encrypt
 -opt_mode Speed
 -opt_level 1

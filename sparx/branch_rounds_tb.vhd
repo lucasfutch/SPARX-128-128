@@ -84,13 +84,17 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 50 ns;	
 		
-		pt 	<= x"0123456789abcdeffedcba9876543210";
 		key_0 <= x"00112233445566778899aabbccddeeff";
+		wait for 10 ns;
 		key_1 <= x"aaa966224433ccff88883376ddcc7722";
+		wait for 10 ns;
 		key_2 <= x"22530083b97721fefdaaeefd4487895f";
+		wait for 10 ns;
 		key_3 <= x"897f8871a6c7a4cb603ec6c944f8ff0f";
+		--wait for 10 ns;
+		pt 	<= x"0123456789abcdeffedcba9876543210";
 		
-      wait for 50 ns;	
+      wait for 10 ns;	
 		
 		pt <= branches_out;
 		key_0 <= x"888157c18783a6452e4a4b10438958ae";
