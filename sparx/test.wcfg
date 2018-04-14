@@ -11,7 +11,11 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="20" />
+   <wave_markers>
+      <marker time="240540000" label="" />
+      <marker time="230300000" label="" />
+   </wave_markers>
    <wvobject fp_name="/encrypt_tb/pt" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">pt[127:0]</obj_property>
       <obj_property name="ObjectShortName">pt[127:0]</obj_property>
@@ -52,28 +56,44 @@
       <obj_property name="ElementShortName">key_3_out[127:0]</obj_property>
       <obj_property name="ObjectShortName">key_3_out[127:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/key_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key_state[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_state[127:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/encrypt_tb/uut/text_state" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">text_state[127:0]</obj_property>
       <obj_property name="ObjectShortName">text_state[127:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/encrypt_tb/uut/key_state" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">key_state[127:0]</obj_property>
-      <obj_property name="ObjectShortName">key_state[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encrypt_tb/uut/key_state" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">key_state[127:0]</obj_property>
-      <obj_property name="ObjectShortName">key_state[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encrypt_tb/uut/round" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">round[2:0]</obj_property>
-      <obj_property name="ObjectShortName">round[2:0]</obj_property>
+   <wvobject fp_name="/encrypt_tb/uut/text_state_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">text_state_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">text_state_1[127:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/encrypt_tb/uut/branch_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">branch_out[127:0]</obj_property>
       <obj_property name="ObjectShortName">branch_out[127:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/round" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">round[2:0]</obj_property>
+      <obj_property name="ObjectShortName">round[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/encrypt_tb/uut/my_counter" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">my_counter[1:0]</obj_property>
       <obj_property name="ObjectShortName">my_counter[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/key_0_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key_0_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_0_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/key_1_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key_1_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_1_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/key_2_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key_2_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_2_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encrypt_tb/uut/key_3_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key_3_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_3_in[127:0]</obj_property>
    </wvobject>
 </wave_config>

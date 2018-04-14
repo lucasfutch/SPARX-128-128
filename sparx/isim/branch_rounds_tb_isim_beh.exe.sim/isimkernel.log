@@ -2,14 +2,14 @@ Command line:
    branch_rounds_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50369
+     -socket  50451
 
-Sat Apr 14 17:12:38 2018
+Sat Apr 14 18:22:04 2018
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 535.405 Meg
+ Current Memory Usage: 535.355 Meg
 
  Total Signals          : 322
  Total Nets             : 3040
@@ -21,9 +21,9 @@ Sat Apr 14 17:12:38 2018
  Total Scalar Nets and Variables : 3523
 Total Line Count : 184
 
- Total Simulation Time: 0.09375 sec
+ Total Simulation Time: 0.078125 sec
 
- Current Memory Usage: 535.405 Meg
+ Current Memory Usage: 535.355 Meg
 
-Sat Apr 14 17:12:55 2018
+Sat Apr 14 18:22:15 2018
 

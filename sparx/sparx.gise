@@ -31,9 +31,7 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="branch_round_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="branch_rounds_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="branch_rounds_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="branch_rounds_tb_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="encrypt.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="encrypt.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="encrypt.lso"/>
@@ -66,7 +64,9 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encrypt_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="encrypt_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="encrypt_summary.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="encrypt_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="encrypt_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="encrypt_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="encrypt_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encrypt_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
@@ -101,7 +101,7 @@
     <transform xil_pn:end_ts="1523707679" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1523707679">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523711548" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523711548">
+    <transform xil_pn:end_ts="1523716459" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523716459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="A_function.vhd"/>
@@ -122,11 +122,11 @@
       <outfile xil_pn:name="step_round.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523710196" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5131744978653666349" xil_pn:start_ts="1523710196">
+    <transform xil_pn:end_ts="1523715739" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6086151833383003984" xil_pn:start_ts="1523715739">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523710196" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1132235345441373777" xil_pn:start_ts="1523710196">
+    <transform xil_pn:end_ts="1523715739" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3941272475524543186" xil_pn:start_ts="1523715739">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -134,7 +134,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523711548" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523711548">
+    <transform xil_pn:end_ts="1523716459" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523716459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="A_function.vhd"/>
@@ -155,20 +155,27 @@
       <outfile xil_pn:name="step_round.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523711555" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4369130017767820026" xil_pn:start_ts="1523711548">
+    <transform xil_pn:end_ts="1523716466" xil_pn:in_ck="-3582116001576493619" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="857181134637452864" xil_pn:start_ts="1523716459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="branch_rounds_tb_beh.prj"/>
-      <outfile xil_pn:name="branch_rounds_tb_isim_beh.exe"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="encrypt_tb_beh.prj"/>
+      <outfile xil_pn:name="encrypt_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1523711555" xil_pn:in_ck="-8856901180980522763" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4816593715403566733" xil_pn:start_ts="1523711555">
+    <transform xil_pn:end_ts="1523716467" xil_pn:in_ck="-8856901180980522763" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3765983817053961395" xil_pn:start_ts="1523716466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="branch_rounds_tb_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="encrypt_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -203,6 +210,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="encrypt.lso"/>
       <outfile xil_pn:name="encrypt.ngc"/>
@@ -224,6 +233,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
