@@ -42,7 +42,7 @@ ARCHITECTURE behavior OF key_perm_tb IS
     COMPONENT key_perm
     PORT(
          key_in : IN  std_logic_vector(127 downto 0);
-         c : IN  std_logic_vector(4 downto 0);
+         c : IN  std_logic_vector(5 downto 0);
          key_out : OUT  std_logic_vector(127 downto 0)
         );
     END COMPONENT;
@@ -50,7 +50,7 @@ ARCHITECTURE behavior OF key_perm_tb IS
 
    --Inputs
    signal key_in : std_logic_vector(127 downto 0) := (others => '0');
-   signal c : std_logic_vector(4 downto 0) := (others => '0');
+   signal c : std_logic_vector(5 downto 0) := (others => '0');
 
  	--Outputs
    signal key_out : std_logic_vector(127 downto 0);
@@ -74,7 +74,7 @@ BEGIN
       wait for 100 ns;	
 
 		key_in <= x"00112233445566778899aabbccddeeff";
-		c <= "00001";
+		c <= "000001";
 		
 		wait for 100 ns;	
 		
@@ -85,7 +85,7 @@ BEGIN
 		
 		wait for 100 ns;
 		key_in <= x"aaa966224433ccff88883376ddcc7722";
-		c <= "00010";
+		c <= "000010";
 		
 		wait for 100 ns;
 		key_out_exp := key_out;
@@ -95,7 +95,7 @@ BEGIN
 		
 		wait for 100 ns;
 		key_in <= x"22530083b97721fefdaaeefd4487895f";
-		c <= "00011";
+		c <= "000011";
 		
 		wait for 100 ns;
 		key_out_exp := key_out;
@@ -105,7 +105,7 @@ BEGIN
 		
 		wait for 100 ns;
 		key_in <= x"897f8871a6c7a4cb603ec6c944f8ff0f";
-		c <= "00100";
+		c <= "000100";
 		
 		wait for 100 ns;
 		key_out_exp := key_out;
@@ -115,7 +115,7 @@ BEGIN
 		
 		wait for 100 ns;
 		key_in <= x"888157c18783a6452e4a4b10438958ae";
-		c <= "00101";
+		c <= "000101";
 		
 		wait for 100 ns;
 		key_out_exp := key_out;

@@ -50,7 +50,7 @@ end component;
 
 component key_schedule is
     Port ( key_master : in  STD_LOGIC_VECTOR (127 downto 0);
-			  round : in STD_LOGIC_VECTOR(2 downto 0);
+			  round : in STD_LOGIC_VECTOR(3 downto 0);
 			  clk : in STD_LOGIC;
 			  en : in STD_LOGIC;
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -76,7 +76,7 @@ signal key_3_in : STD_LOGIC_VECTOR(127 downto 0);
 signal text_state : STD_LOGIC_VECTOR(127 downto 0);-- := x"00000000000000000000000000000000";
 signal text_state_1 : STD_LOGIC_VECTOR(127 downto 0);-- := x"00000000000000000000000000000000";
 
-signal round : STD_LOGIC_VECTOR(2 downto 0) := "000";
+signal round : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
 signal key_state : STD_LOGIC_VECTOR(127 downto 0);
 signal keys_done : STD_LOGIC := '0';
@@ -96,12 +96,14 @@ begin
 		if en = '1' then
 			my_counter <= STD_LOGIC_VECTOR(unsigned(my_counter) + 1);
 			
-			key_1_in <= key_0_out;
-			key_2_in <= key_1_out;
-			key_3_in <= key_2_out;
-			text_state_1 <= branch_out;
+			
 			
 			if my_counter = "11" then	
+			
+				key_1_in <= key_0_out;
+				key_2_in <= key_1_out;
+				key_3_in <= key_2_out;
+				text_state_1 <= branch_out;
 				
 				round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
 				my_counter <= "00";
@@ -112,11 +114,11 @@ begin
 end process;
 
 with round select text_state <=
-	pt when "000",
+	pt when "0000",
 	text_state_1 when others;
 	
 with round select key_state <= 
-	key_master when "000",
+	key_master when "0000",
 	key_3_out when others;
 	
 --with round select key_0_in <=
@@ -124,7 +126,7 @@ with round select key_state <=
 --	key_0_out when others;
 
 with round select ct <= 
-	text_state XOR key_3_out when "111",
+	text_state XOR key_3_out when "1000",
 	text_state when others;
 
 end Behavioral;

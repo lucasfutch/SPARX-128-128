@@ -42,7 +42,7 @@ ARCHITECTURE behavior OF key_shchedule_tb IS
     COMPONENT key_schedule
     PORT(
          key_master : IN  std_logic_vector(127 downto 0);
-         round : IN  std_logic_vector(2 downto 0);
+         round : IN  std_logic_vector(3 downto 0);
          clk : IN  std_logic;
 			en : IN std_logic;
          key_0 : OUT  std_logic_vector(127 downto 0);
@@ -56,7 +56,7 @@ ARCHITECTURE behavior OF key_shchedule_tb IS
 
    --Inputs
    signal key_master : std_logic_vector(127 downto 0) := (others => '0');
-   signal round : std_logic_vector(2 downto 0) := (others => '0');
+   signal round : std_logic_vector(3 downto 0) := (others => '0');
    signal clk : std_logic := '0';
 	signal en : std_logic := '0';
 
@@ -103,36 +103,36 @@ BEGIN
 		
       wait for 50 ns;	
 		key_master <= x"00112233445566778899aabbccddeeff";
-		round <= "000";
+		round <= "0000";
 		en <= '1';
 		
 		wait for clk_period*3.5;
 		key_master <= x"888157c18783a6452e4a4b10438958ae";
-		round <= "001";
+		round <= "0001";
 		
 		wait for clk_period*4;
 		key_master <= x"f1b697b253d53ff0c7085814e31a243a";
-		round <= "010";
+		round <= "0010";
 		
 		wait for clk_period*4;
 		key_master <= x"cf2f73dc63c67241d2b564608c61ccb9";
-		round <= "011";
+		round <= "0011";
 		
 		wait for clk_period*4;
 		key_master <= x"aa205882dce9c79cd5c0e45ab28f492c";
-		round <= "100";
+		round <= "0100";
 		
 		wait for clk_period*4;
 		key_master <= x"da2600671cc7967d3f1ed4c70fd1ad3f";
-		round <= "101";	
+		round <= "0101";	
 
 		wait for clk_period*4;
 		key_master <= x"5ce958e00b3a2402bdec8a5d51437fdb";
-		round <= "110";
+		round <= "0110";
 
 		wait for clk_period*4;
 		key_master <= x"5b5724ff1f2b716bcbcd8be4a05dac5c";
-		round <= "111";		
+		round <= "0111";		
 
 
       -- insert stimulus here 

@@ -85,6 +85,7 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
+	variable ct_exp : std_logic_vector(127 downto 0);
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
@@ -92,13 +93,20 @@ BEGIN
 		pt 		  <= x"0123456789abcdeffedcba9876543210";
 		key_master <= x"00112233445566778899aabbccddeeff";
 		
-
-      --wait for clk_period*10;
 		wait for 100 ns;
 		
 		en <= '1';
 		
-		--wait for 100 ns;
+		-- time it takes to complete on pt encryption
+		-- 32 clock cycles
+		wait for 320 ns;
+		
+		ct_exp := ct;
+		assert ct_exp = x"1cee75407dbf23d8e0ee1597f42852d8"
+		report "Unexpected Result for ct" 
+		severity error;
+		
+		
 
       -- insert stimulus here 
 

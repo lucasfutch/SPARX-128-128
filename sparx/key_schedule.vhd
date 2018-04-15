@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity key_schedule is
     Port ( key_master : in  STD_LOGIC_VECTOR (127 downto 0);
-			  round : in STD_LOGIC_VECTOR(2 downto 0);
+			  round : in STD_LOGIC_VECTOR(3 downto 0);
 			  clk : in STD_LOGIC;
 			  en : in STD_LOGIC;
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -46,7 +46,7 @@ architecture Behavioral of key_schedule is
 
 component key_perm is
     Port ( key_in : in  STD_LOGIC_VECTOR (127 downto 0);
-			  c : in STD_LOGIC_VECTOR (4 downto 0);
+			  c : in STD_LOGIC_VECTOR (5 downto 0);
            key_out : out  STD_LOGIC_VECTOR (127 downto 0));
 end component key_perm;
 
@@ -61,7 +61,7 @@ signal key_2_in : STD_LOGIC_VECTOR(127 downto 0);
 signal key_3_in : STD_LOGIC_VECTOR(127 downto 0);
 
 signal key_round : STD_LOGIC_VECTOR(1 downto 0) := "00";
-signal c_round : STD_LOGIC_VECTOR(4 downto 0) := "00000";
+signal c_round : STD_LOGIC_VECTOR(5 downto 0) := "000000";
 
 begin
 new_key_0 : key_perm PORT MAP(key_master, c_round, key_0_out);
