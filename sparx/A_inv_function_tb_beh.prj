@@ -1,0 +1,2 @@
+vhdl work "A_inv_function.vhd"
+vhdl work "A_inv_function_tb.vhd"
