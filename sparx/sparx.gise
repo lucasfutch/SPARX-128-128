@@ -23,7 +23,10 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="A_function_tb_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="A_inv_function_tb_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="L_function_tb_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="L_inv_function_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="L_inv_function_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -65,7 +68,6 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="encrypt_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="encrypt_summary.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="encrypt_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="encrypt_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="encrypt_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encrypt_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -94,11 +96,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1523707679" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1523707679">
+    <transform xil_pn:end_ts="1523862372" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1523862372">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523793929" xil_pn:in_ck="-7993434352460390042" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523793929">
+    <transform xil_pn:end_ts="1523863457" xil_pn:in_ck="8026175533535739701" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523863457">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="A_function.vhd"/>
@@ -107,6 +109,8 @@
       <outfile xil_pn:name="A_inv_function_tb.vhd"/>
       <outfile xil_pn:name="L_function.vhd"/>
       <outfile xil_pn:name="L_function_tb.vhd"/>
+      <outfile xil_pn:name="L_inv_function.vhd"/>
+      <outfile xil_pn:name="L_inv_function_tb.vhd"/>
       <outfile xil_pn:name="branch_round.vhd"/>
       <outfile xil_pn:name="branch_round_tb.vhd"/>
       <outfile xil_pn:name="branch_rounds.vhd"/>
@@ -121,19 +125,19 @@
       <outfile xil_pn:name="step_round.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523793884" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8778936388440297021" xil_pn:start_ts="1523793884">
+    <transform xil_pn:end_ts="1523862372" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="822680094759116552" xil_pn:start_ts="1523862372">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523793884" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5461763450843677509" xil_pn:start_ts="1523793884">
+    <transform xil_pn:end_ts="1523862372" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2934814945982890886" xil_pn:start_ts="1523862372">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523707679" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8711098372439265072" xil_pn:start_ts="1523707679">
+    <transform xil_pn:end_ts="1523862372" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8711098372439265072" xil_pn:start_ts="1523862372">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523793929" xil_pn:in_ck="-7993434352460390042" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523793929">
+    <transform xil_pn:end_ts="1523863457" xil_pn:in_ck="8026175533535739701" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523863457">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="A_function.vhd"/>
@@ -142,6 +146,8 @@
       <outfile xil_pn:name="A_inv_function_tb.vhd"/>
       <outfile xil_pn:name="L_function.vhd"/>
       <outfile xil_pn:name="L_function_tb.vhd"/>
+      <outfile xil_pn:name="L_inv_function.vhd"/>
+      <outfile xil_pn:name="L_inv_function_tb.vhd"/>
       <outfile xil_pn:name="branch_round.vhd"/>
       <outfile xil_pn:name="branch_round_tb.vhd"/>
       <outfile xil_pn:name="branch_rounds.vhd"/>
@@ -156,17 +162,16 @@
       <outfile xil_pn:name="step_round.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523793931" xil_pn:in_ck="-7993434352460390042" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6400310576136384454" xil_pn:start_ts="1523793929">
+    <transform xil_pn:end_ts="1523863461" xil_pn:in_ck="8026175533535739701" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4174453407551419184" xil_pn:start_ts="1523863457">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523716467" xil_pn:in_ck="-8856901180980522763" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3765983817053961395" xil_pn:start_ts="1523716466">
+    <transform xil_pn:end_ts="1523862376" xil_pn:in_ck="4435271905774929324" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7749757621712286115" xil_pn:start_ts="1523862376">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForced"/>
-      <outfile xil_pn:name="encrypt_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="L_inv_function_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>
     <transform xil_pn:end_ts="1523707624" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1523707624">
