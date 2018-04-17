@@ -57,5 +57,6 @@ x7_tmp <= state_in(79 downto 64) XOR state_in(15 downto 0) XOR tmp_rot;
 state_out <= state_in(63 downto 48) & state_in(47 downto 32) 
 				 & state_in(31 downto 16) & state_in(15 downto 0) 
 				 & x4_tmp & x5_tmp & x6_tmp & x7_tmp;
+				 
 end Behavioral;
 

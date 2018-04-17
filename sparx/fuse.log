@@ -1,18 +1,22 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb_isim_beh.exe -prj C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb_beh.prj work.L_inv_function_tb 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb_isim_beh.exe -prj C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb_beh.prj work.step_round_inv_tb 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function.vhd" into library work
-Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb.vhd" into library work
+Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/A_inv_function.vhd" into library work
+Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv.vhd" into library work
+Parsing VHDL file "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity L_inv_function [l_inv_function_default]
-Compiling architecture behavior of entity l_inv_function_tb
+Compiling package numeric_std
+Compiling architecture behavioral of entity A_inv_function [a_inv_function_default]
+Compiling architecture behavioral of entity step_round_inv [step_round_inv_default]
+Compiling architecture behavior of entity step_round_inv_tb
 Time Resolution for simulation is 1ps.
-Compiled 5 VHDL Units
-Built simulation executable C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb_isim_beh.exe
-Fuse Memory Usage: 29504 KB
-Fuse CPU Usage: 452 ms
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 8 VHDL Units
+Built simulation executable C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb_isim_beh.exe
+Fuse Memory Usage: 35068 KB
+Fuse CPU Usage: 531 ms
