@@ -1,1 +1,5 @@
+work	"A_inv_function.vhd"
+work	"L_inv_function.vhd"
 work	"branch_round_inv.vhd"
+work	"branch_rounds_inv.vhd"
+work	"step_round_inv.vhd"

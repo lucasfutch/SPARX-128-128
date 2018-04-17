@@ -1,0 +1,6 @@
+vhdl isim_temp "A_function.vhd"
+vhdl isim_temp "step_round.vhd"
+vhdl isim_temp "L_function.vhd"
+vhdl isim_temp "branch_round.vhd"
+vhdl isim_temp "branch_rounds.vhd"
+vhdl isim_temp "branch_rounds_tb.vhd"

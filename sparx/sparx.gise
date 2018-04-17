@@ -32,8 +32,12 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="branch_round_inv_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="branch_round_inv_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="branch_round_inv_tb_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="branch_round_tb_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="branch_rounds_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="branch_rounds_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="encrypt.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="encrypt.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="encrypt.lso"/>
@@ -90,9 +94,7 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
     <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/encrypt_synthesis.nlf"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/encrypt_synthesis.vhd"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="step_round_inv_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="step_round_inv_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="step_round_inv_tb_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="step_round_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
@@ -105,12 +107,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523954702" xil_pn:in_ck="8736194258507793640" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523954702">
+    <transform xil_pn:end_ts="1523976509" xil_pn:in_ck="-1401418495830258276" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1523976509">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="A_function.vhd"/>
       <outfile xil_pn:name="A_function_tb.vhd"/>
       <outfile xil_pn:name="A_inv_function.vhd"/>
@@ -120,8 +119,12 @@
       <outfile xil_pn:name="L_inv_function.vhd"/>
       <outfile xil_pn:name="L_inv_function_tb.vhd"/>
       <outfile xil_pn:name="branch_round.vhd"/>
+      <outfile xil_pn:name="branch_round_inv.vhd"/>
+      <outfile xil_pn:name="branch_round_inv_tb.vhd"/>
       <outfile xil_pn:name="branch_round_tb.vhd"/>
       <outfile xil_pn:name="branch_rounds.vhd"/>
+      <outfile xil_pn:name="branch_rounds_inv.vhd"/>
+      <outfile xil_pn:name="branch_rounds_inv_tb.vhd"/>
       <outfile xil_pn:name="branch_rounds_tb.vhd"/>
       <outfile xil_pn:name="encrypt.vhd"/>
       <outfile xil_pn:name="encrypt_tb.vhd"/>
@@ -135,22 +138,29 @@
       <outfile xil_pn:name="step_round_inv_tb.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523954403" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8919773228120678438" xil_pn:start_ts="1523954403">
+    <transform xil_pn:end_ts="1523974735" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3097131828546471884" xil_pn:start_ts="1523974735">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1523954403" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5445859573019289688" xil_pn:start_ts="1523954403">
+    <transform xil_pn:end_ts="1523974735" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1620391751667479626" xil_pn:start_ts="1523974735">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1523863466" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8711098372439265072" xil_pn:start_ts="1523863466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1523954702" xil_pn:in_ck="8736194258507793640" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523954702">
+    <transform xil_pn:end_ts="1523975223" xil_pn:in_ck="3476902266190502175" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1523975223">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="A_function.vhd"/>
       <outfile xil_pn:name="A_function_tb.vhd"/>
       <outfile xil_pn:name="A_inv_function.vhd"/>
@@ -160,6 +170,8 @@
       <outfile xil_pn:name="L_inv_function.vhd"/>
       <outfile xil_pn:name="L_inv_function_tb.vhd"/>
       <outfile xil_pn:name="branch_round.vhd"/>
+      <outfile xil_pn:name="branch_round_inv.vhd"/>
+      <outfile xil_pn:name="branch_round_inv_tb.vhd"/>
       <outfile xil_pn:name="branch_round_tb.vhd"/>
       <outfile xil_pn:name="branch_rounds.vhd"/>
       <outfile xil_pn:name="branch_rounds_tb.vhd"/>
@@ -175,28 +187,32 @@
       <outfile xil_pn:name="step_round_inv_tb.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1523954706" xil_pn:in_ck="8736194258507793640" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1638293458332876564" xil_pn:start_ts="1523954702">
+    <transform xil_pn:end_ts="1523975228" xil_pn:in_ck="3476902266190502175" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6931360578609987000" xil_pn:start_ts="1523975223">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="branch_round_inv_tb_beh.prj"/>
+      <outfile xil_pn:name="branch_round_inv_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="step_round_inv_tb_beh.prj"/>
-      <outfile xil_pn:name="step_round_inv_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1523954707" xil_pn:in_ck="-9019751232979191905" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1073395612398447871" xil_pn:start_ts="1523954706">
+    <transform xil_pn:end_ts="1523975228" xil_pn:in_ck="-7874409220089240540" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8875510861118821925" xil_pn:start_ts="1523975228">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="branch_round_inv_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="step_round_inv_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1523707624" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1523707624">
       <status xil_pn:value="SuccessfullyRun"/>
