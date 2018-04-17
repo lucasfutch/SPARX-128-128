@@ -39,13 +39,13 @@
          <ClosedNode>/key_perm - Behavioral C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|key_perm.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>step_0 - step_round - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round.vhd)</SelectedItem>
+         <SelectedItem>encrypt - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>step_0 - step_round - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round.vhd)</CurrentItem>
+      <CurrentItem>encrypt - Behavioral (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/encrypt.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -61,7 +61,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000b8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000b80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -74,7 +74,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001d2000000040101000100000000000000000000000064ffffffff000000810000000000000004000000760000000100000000000000440000000100000000000000660000000100000000000000b20000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000760000000100000000000000440000000100000000000000660000000100000000000001320000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>A_function.vhd</CurrentItem>
    </ItemView>
@@ -121,13 +121,13 @@
          <ClosedNode>/step_round_tb - behavior C:|Users|Lucas Futch|Documents|sparx_vhdl|sparx|step_round_tb.vhd/uut - step_round - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>L_inv_function_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb.vhd)</SelectedItem>
+         <SelectedItem>step_round_inv_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000173000000020000000000000000000000000200000064ffffffff000000810000000300000002000001730000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000196000000020000000000000000000000000200000064ffffffff000000810000000300000002000001960000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>L_inv_function_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/L_inv_function_tb.vhd)</CurrentItem>
+      <CurrentItem>step_round_inv_tb - behavior (C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -148,16 +148,16 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000cd0000007801000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>

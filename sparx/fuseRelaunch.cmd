@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/step_round_inv_tb_beh.prj" "work.step_round_inv_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_round_inv_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/branch_round_inv_tb_beh.prj" "work.branch_round_inv_tb" 
