@@ -37,8 +37,8 @@ entity key_schedule is
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_1 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_2 : out  STD_LOGIC_VECTOR (127 downto 0);
-           key_3 : out  STD_LOGIC_VECTOR (127 downto 0);
-           keys_ready : out  STD_LOGIC := '0'
+           key_3 : out  STD_LOGIC_VECTOR (127 downto 0)
+           --keys_ready : out  STD_LOGIC := '0'
            );
 end key_schedule;
 
@@ -78,19 +78,19 @@ begin
 			if key_round = "00" then
 				key_1_in <= key_0_out;
 				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-				keys_ready <= '0';
+				--keys_ready <= '0';
 			elsif key_round = "01" then
 				key_2_in <= key_1_out;
 				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-				keys_ready <= '0';
+				--keys_ready <= '0';
 			elsif key_round = "10" then
 				key_3_in <= key_2_out;
 				key_round <= STD_LOGIC_VECTOR(unsigned(key_round) + 1);
-				keys_ready <= '0';
+				--keys_ready <= '0';
 			elsif key_round = "11" then
 				key_3_out_register <= key_3_out;
 				key_round <= "00";
-				keys_ready <= '1';
+				--keys_ready <= '1';
 			end if;
 		end if;
 	end if;

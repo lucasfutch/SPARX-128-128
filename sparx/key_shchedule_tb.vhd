@@ -48,8 +48,8 @@ ARCHITECTURE behavior OF key_shchedule_tb IS
          key_0 : OUT  std_logic_vector(127 downto 0);
          key_1 : OUT  std_logic_vector(127 downto 0);
          key_2 : OUT  std_logic_vector(127 downto 0);
-         key_3 : OUT  std_logic_vector(127 downto 0);
-         keys_ready : OUT  std_logic
+         key_3 : OUT  std_logic_vector(127 downto 0)
+         --keys_ready : OUT  std_logic
         );
     END COMPONENT;
     
@@ -81,8 +81,8 @@ BEGIN
           key_0 => key_0,
           key_1 => key_1,
           key_2 => key_2,
-          key_3 => key_3,
-          keys_ready => keys_ready
+          key_3 => key_3
+          --keys_ready => keys_ready
         );
 
    -- Clock process definitions

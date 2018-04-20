@@ -103,8 +103,8 @@ BEGIN
 		
 		ct_exp := ct;
 		assert ct_exp = x"1cee75407dbf23d8e0ee1597f42852d8"
-		report "Unexpected Result for ct" 
-		severity error;
+		--report "Correct result for ct!";
+		report "Unexpected Result for ct" severity error;
 		
 		
 

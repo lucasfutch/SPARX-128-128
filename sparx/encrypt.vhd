@@ -56,8 +56,8 @@ component key_schedule is
            key_0 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_1 : out  STD_LOGIC_VECTOR (127 downto 0);
            key_2 : out  STD_LOGIC_VECTOR (127 downto 0);
-           key_3 : out  STD_LOGIC_VECTOR (127 downto 0);
-           keys_ready : out  STD_LOGIC
+           key_3 : out  STD_LOGIC_VECTOR (127 downto 0)
+           --keys_ready : out  STD_LOGIC
            );
 end component key_schedule;
 
@@ -85,7 +85,7 @@ signal my_counter : STD_LOGIC_VECTOR(1 downto 0) := "00";
 
 begin
 
-key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, en, key_0_out, key_1_out, key_2_out, key_3_out, keys_done);
+key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, en, key_0_out, key_1_out, key_2_out, key_3_out);
 branch : branch_rounds PORT MAP(text_state, key_state, key_0_out, key_1_out, key_2_out, branch_out);
 
 
