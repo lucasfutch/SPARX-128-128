@@ -91,12 +91,15 @@ type ram_type is array (0 to 32) of STD_LOGIC_VECTOR(127 downto 0);
 signal ram : ram_type;
 
 signal read_address : STD_LOGIC_VECTOR(5 downto 0) := "011100"; -- start at 31
-signal address : STD_LOGIC_VECTOR(5 downto 0) := "000000"; -- start at -3
+signal address : STD_LOGIC_VECTOR(5 downto 0) := "000000";
 
 signal key_write : STD_LOGIC_VECTOR(127 downto 0);
 signal key_read : STD_LOGIC_VECTOR(127 downto 0);
 
+signal key32 : STD_LOGIC_VECTOR(127 downto 0);
+
 signal getting_keys : STD_LOGIC := '1';
+signal begin_save : STD_LOGIC := '0';
 
 begin
 
@@ -107,13 +110,15 @@ branch : branch_rounds_inv PORT MAP
 	(text_state, key_0_in, key_1_in, key_2_in, key_3_in, branch_out);
 
 
-decryption_process_key_storage: process(clk, key_write) is
+decryption_process_key_storage: process(clk) is
 begin
     if rising_edge(clk) then
-		if getting_keys = '1' then
-        ram(to_integer(unsigned(address))) <= key_write;
-      end if;
-    end if;
+		 --if begin_save = '1' then
+			if getting_keys = '1' then
+			  ram(to_integer(unsigned(address))) <= key_write;
+			end if;
+		 --end if;
+	 end if;
 
 end process decryption_process_key_storage;
 
@@ -124,23 +129,37 @@ begin
 
 	if rising_edge(clk) then
 		if en = '1' then
+		
+			if begin_save = '1' then
+				--if address = "111111" then
+					--address <= "000000";
+				--else
+				address <= STD_LOGIC_VECTOR(unsigned(address) + 1);
+				
+				if address = "100000" then
+					key32 <= key_write;
+				end if;
+			end if;
 			
 			my_counter <= STD_LOGIC_VECTOR(unsigned(my_counter) + 1);
-			address <= STD_LOGIC_VECTOR(unsigned(address) + 1);
+			
+			
 
 			pt <= text_state;
 			
 			-- get all keys and save to RAM first
 			if getting_keys = '1' then
+				begin_save <= '1';
 			
 				if my_counter = "00" then
+					key_write <= key_state;
+				elsif my_counter = "01" then
 					key_write <= key_0_out;
-				elsif my_counter = "00" then
+				elsif my_counter = "10" then
 					key_write <= key_1_out;
-				elsif my_counter = "00" then
+				elsif my_counter = "11" then
+					
 					key_write <= key_2_out;
-				elsif my_counter = "00" then
-					key_write <= key_3_out;
 					round <= STD_LOGIC_VECTOR(unsigned(round) + 1);	
 					my_counter <= "00";
 				end if;
@@ -154,7 +173,7 @@ begin
 				key_3_in <= ram(to_integer(unsigned(read_address) + 3));
 				
 				-- use four keys in order each round
-				if my_counter = "11" then	
+				if my_counter = "10" then	
 					text_state_1 <= branch_out;
 					round <= STD_LOGIC_VECTOR(unsigned(round) + 1); 				
 					my_counter <= "00";
@@ -164,12 +183,11 @@ begin
 			
 			-- reset rounds after 8 times (keys are all saved)
 			if round = "1000" then
-				round <= "0000";
 				getting_keys <= '0';
+			elsif round = "1001" then
+				round <= "0000";
 				address <= "000000";
-			end if;
-				
-							
+			end if;	
 		end if;
 	end if;
 	
@@ -183,7 +201,7 @@ with round select key_state <=
 	key_3_out when others;
 	
 with round select text_state <=
-	ct when "1000",
+	ct XOR key32 when "1000",
 	text_state_1 when others;
 	
 

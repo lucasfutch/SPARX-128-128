@@ -31,5 +31,5 @@ Compiling architecture behavior of entity decrypt_tb
 Time Resolution for simulation is 1ps.
 Compiled 22 VHDL Units
 Built simulation executable C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/decrypt_tb_isim_beh.exe
-Fuse Memory Usage: 35628 KB
-Fuse CPU Usage: 624 ms
+Fuse Memory Usage: 35640 KB
+Fuse CPU Usage: 640 ms

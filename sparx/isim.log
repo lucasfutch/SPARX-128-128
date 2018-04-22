@@ -13,3 +13,406 @@ Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 at 300 ns: Error: Unexpected Result for ct
 INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 255 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 265 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 275 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 285 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 295 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 300 ns: Error: Unexpected Result for ct
+at 305 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 315 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 325 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 335 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 345 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 355 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 365 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 375 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 385 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 395 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 405 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 415 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 425 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 435 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 445 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 455 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 465 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 475 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 485 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 495 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 515 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 525 ns(1), Instance /decrypt_tb/uut/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 300 ns: Error: Unexpected Result for ct
+ERROR: Index 60 out of bound 0 to 32. 
+ERROR: In process decrypt.vhd:decryption_process_round_count 
+ 
+INFO: Simulator is stopped.
