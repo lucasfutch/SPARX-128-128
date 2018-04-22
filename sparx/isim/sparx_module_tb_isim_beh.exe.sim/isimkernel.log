@@ -1,0 +1,29 @@
+Command line:
+   sparx_module_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54134
+
+Mon Apr 23 01:22:09 2018
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 752.951 Meg
+
+ Total Signals          : 896
+ Total Nets             : 15856
+ Total Signal Drivers   : 366
+ Total Blocks           : 108
+ Total Primitive Blocks : 52
+ Total Processes        : 216
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 16340
+Total Line Count : 441
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 752.951 Meg
+
+Mon Apr 23 01:22:31 2018
+

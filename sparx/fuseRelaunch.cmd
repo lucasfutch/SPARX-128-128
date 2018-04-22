@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/decrypt_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/decrypt_tb_beh.prj" "work.decrypt_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module_tb_isim_beh.exe" -prj "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module_tb_beh.prj" "work.sparx_module_tb" 
