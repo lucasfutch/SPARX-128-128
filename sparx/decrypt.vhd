@@ -113,11 +113,9 @@ branch : branch_rounds_inv PORT MAP
 decryption_process_key_storage: process(clk) is
 begin
     if rising_edge(clk) then
-		 --if begin_save = '1' then
 			if getting_keys = '1' then
 			  ram(to_integer(unsigned(address))) <= key_write;
 			end if;
-		 --end if;
 	 end if;
 
 end process decryption_process_key_storage;
@@ -130,23 +128,18 @@ begin
 	if rising_edge(clk) then
 		if en = '1' then
 		
+			my_counter <= STD_LOGIC_VECTOR(unsigned(my_counter) + 1);
+			pt <= text_state;
+		
+			-- wait a counter to begin increasing address
 			if begin_save = '1' then
-				--if address = "111111" then
-					--address <= "000000";
-				--else
 				address <= STD_LOGIC_VECTOR(unsigned(address) + 1);
 				
 				if address = "100000" then
 					key32 <= key_write;
 				end if;
 			end if;
-			
-			my_counter <= STD_LOGIC_VECTOR(unsigned(my_counter) + 1);
-			
-			
-
-			pt <= text_state;
-			
+				
 			-- get all keys and save to RAM first
 			if getting_keys = '1' then
 				begin_save <= '1';
@@ -178,6 +171,11 @@ begin
 					round <= STD_LOGIC_VECTOR(unsigned(round) + 1); 				
 					my_counter <= "00";
 					read_address <= STD_LOGIC_VECTOR(unsigned(read_address) - 4);
+					
+					if read_address = "000000" then
+						read_address <= "011100";
+					end if;
+					
 				end if;
 			end if;
 			

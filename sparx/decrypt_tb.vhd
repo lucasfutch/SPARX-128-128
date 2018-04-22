@@ -96,14 +96,15 @@ BEGIN
 		wait for 100 ns;
 		
 		en <= '1';
-      -- insert stimulus here 
 		
-		wait for 100 ns;
+		-- 57 clock cycles for decrypt to be done
+		wait for 570 ns;
 		
 		pt_exp := pt;
-		assert pt_exp = x"0123456789abcdeffedcba9876543210"
-		report "Unexpected Result for ct" 
+		assert pt_exp = x"1123456789abcdeffedcba9876543210"
+		report "Unexpected Result for pt" 
 		severity error;
+		
 
       wait;
    end process;

@@ -32,4 +32,4 @@ Time Resolution for simulation is 1ps.
 Compiled 22 VHDL Units
 Built simulation executable C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/decrypt_tb_isim_beh.exe
 Fuse Memory Usage: 35640 KB
-Fuse CPU Usage: 640 ms
+Fuse CPU Usage: 655 ms
