@@ -56,7 +56,7 @@ ARCHITECTURE behavior OF sparx_module_tb IS
    signal master_key : std_logic_vector(127 downto 0) := (others => '0');
    signal clk : std_logic := '0';
    signal sel : std_logic := '0';
-	signal reset : std_logic := '0';
+	signal reset : std_logic := '1';
 	
  	--Outputs
    signal output_text : std_logic_vector(127 downto 0);
@@ -92,39 +92,39 @@ BEGIN
 	variable pt_exp : std_logic_vector(127 downto 0);
    begin		
 	
-		wait for 50 ns;
+		wait for 10 ns;
 		reset <= '1';
-      wait for 50 ns;	
+      wait for 10 ns;	
 
-		input_text <= x"1123456789abcdeffedcba9876543210";
+		input_text <= x"0123456789abcdeffedcba9876543210";
       master_key <= x"00112233445566778899aabbccddeeff";
 		sel <= '0';
 		
-		wait for 50 ns;
-		
+		wait for 10 ns;
 		reset <= '0';
-		
-		wait for 320 ns;
+		wait for 330 ns;
 		
 		ct_exp := output_text;
 		assert ct_exp = x"1cee75407dbf23d8e0ee1597f42852d8"
-		report "Unexpected Result for ct" severity error;
+		report "Unexpected Result for ct" 
+		severity error;
 		
-		wait for 50 ns;
+		wait for 10 ns;
 		reset <= '1';
-		wait for 50 ns;
+		input_text <= x"00000000000000000000000000000000";
+      master_key <= x"00000000000000000000000000000000";
+		wait for 10 ns;
 		
 		input_text <= x"1cee75407dbf23d8e0ee1597f42852d8";
+		master_key <= x"00112233445566778899aabbccddeeff";
 		sel <= '1';
 		
-		wait for 50 ns;
-		
+		wait for 10 ns;
 		reset <= '0';		
-		
-		wait for 570 ns;
+		wait for 580 ns;
 		
 		pt_exp := output_text;
-		assert pt_exp = x"1123456789abcdeffedcba9876543210"
+		assert pt_exp = x"0123456789abcdeffedcba9876543210"
 		report "Unexpected Result for pt" 
 		severity error;
 

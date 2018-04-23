@@ -56,8 +56,8 @@ component decrypt is
            pt : out  STD_LOGIC_VECTOR (127 downto 0));
 end component decrypt;
 
-signal encryption_en : STD_LOGIC;
-signal decryption_en : STD_LOGIC;
+signal encryption_en : STD_LOGIC := '0';
+signal decryption_en : STD_LOGIC := '0';
 signal text_state_enc : STD_LOGIC_VECTOR(127 downto 0);
 signal text_state_dec : STD_LOGIC_VECTOR(127 downto 0);
 
