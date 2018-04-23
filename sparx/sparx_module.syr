@@ -1,0 +1,1004 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: sparx_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sparx_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sparx_module"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : sparx_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : NO
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_inv_function.vhd" into library work
+Parsing entity <A_inv_function>.
+Parsing architecture <Behavioral> of entity <a_inv_function>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_function.vhd" into library work
+Parsing entity <A_function>.
+Parsing architecture <Behavioral> of entity <a_function>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\step_round_inv.vhd" into library work
+Parsing entity <step_round_inv>.
+Parsing architecture <Behavioral> of entity <step_round_inv>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\step_round.vhd" into library work
+Parsing entity <step_round>.
+Parsing architecture <Behavioral> of entity <step_round>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\L_inv_function.vhd" into library work
+Parsing entity <L_inv_function>.
+Parsing architecture <Behavioral> of entity <l_inv_function>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\L_function.vhd" into library work
+Parsing entity <L_function>.
+Parsing architecture <Behavioral> of entity <l_function>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" into library work
+Parsing entity <key_perm>.
+Parsing architecture <Behavioral> of entity <key_perm>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_round_inv.vhd" into library work
+Parsing entity <branch_round_inv>.
+Parsing architecture <Behavioral> of entity <branch_round_inv>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_round.vhd" into library work
+Parsing entity <branch_round>.
+Parsing architecture <Behavioral> of entity <branch_round>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_schedule.vhd" into library work
+Parsing entity <key_schedule>.
+Parsing architecture <Behavioral> of entity <key_schedule>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_rounds_inv.vhd" into library work
+Parsing entity <branch_rounds_inv>.
+Parsing architecture <Behavioral> of entity <branch_rounds_inv>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_rounds.vhd" into library work
+Parsing entity <branch_rounds>.
+Parsing architecture <Behavioral> of entity <branch_rounds>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd" into library work
+Parsing entity <encrypt>.
+Parsing architecture <Behavioral> of entity <encrypt>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\decrypt.vhd" into library work
+Parsing entity <decrypt>.
+Parsing architecture <Behavioral> of entity <decrypt>.
+Parsing VHDL file "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\sparx_module.vhd" into library work
+Parsing entity <sparx_module>.
+Parsing architecture <Behavioral> of entity <sparx_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <sparx_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <encrypt> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <key_schedule> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <key_perm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <A_function> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_function.vhd" Line 50: right_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" Line 63: key_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" Line 64: key_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" Line 67: key_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd" Line 68: key_in should be on the sensitivity list of the process
+
+Elaborating entity <branch_rounds> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <branch_round> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <step_round> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <L_function> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd" Line 92: Assignment to key_1_in ignored, since the identifier is never used
+
+Elaborating entity <decrypt> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <branch_rounds_inv> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <L_inv_function> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <branch_round_inv> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <step_round_inv> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <A_inv_function> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\sparx_module.vhd" Line 81: text_state_enc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\sparx_module.vhd" Line 85: text_state_dec should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sparx_module>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\sparx_module.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<126>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<125>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<124>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<123>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<122>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<121>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<120>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<119>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<118>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<117>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<116>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<115>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<114>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<113>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<112>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<111>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<110>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<109>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<108>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<107>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<106>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<105>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<104>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<103>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<102>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<101>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<100>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<99>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<98>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<97>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<96>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<95>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<94>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<93>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<92>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<91>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<90>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<89>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<88>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<87>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<86>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<85>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<84>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<83>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<82>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<81>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<80>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<79>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<78>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<77>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<76>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<75>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<74>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<73>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<72>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<71>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<70>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<69>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<68>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<67>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<66>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<65>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<64>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<63>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<62>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <output_text<127>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred 128 Latch(s).
+	inferred 131 Multiplexer(s).
+Unit <sparx_module> synthesized.
+
+Synthesizing Unit <encrypt>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\encrypt.vhd".
+    Found 128-bit register for signal <text_state_1>.
+    Found 4-bit register for signal <round>.
+    Found 2-bit register for signal <my_counter>.
+    Found 2-bit adder for signal <my_counter[1]_GND_5_o_add_0_OUT> created at line 1241.
+    Found 4-bit adder for signal <round[3]_GND_5_o_add_2_OUT> created at line 1241.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 134 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <encrypt> synthesized.
+
+Synthesizing Unit <key_schedule>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_schedule.vhd".
+    Found 2-bit register for signal <key_round>.
+    Found 128-bit register for signal <key_2_in>.
+    Found 128-bit register for signal <key_3_in>.
+    Found 128-bit register for signal <key_3_out_register>.
+    Found 128-bit register for signal <key_1_in>.
+    Found 2-bit adder for signal <key_round[1]_GND_6_o_add_4_OUT> created at line 1241.
+    Found 6-bit adder for signal <n0079> created at line 100.
+    Found 6-bit adder for signal <c_round> created at line 1241.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 514 D-type flip-flop(s).
+Unit <key_schedule> synthesized.
+
+Synthesizing Unit <key_perm>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\key_perm.vhd".
+    Found 16-bit adder for signal <key_out<127:112>> created at line 63.
+    Found 16-bit adder for signal <n0088> created at line 64.
+    Found 16-bit adder for signal <key_out<111:96>> created at line 64.
+    Found 16-bit adder for signal <key_out<63:48>> created at line 67.
+    Found 16-bit adder for signal <key_out<47:32>> created at line 68.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+Unit <key_perm> synthesized.
+
+Synthesizing Unit <A_function>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_function.vhd".
+    Found 16-bit adder for signal <left_mid> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <A_function> synthesized.
+
+Synthesizing Unit <branch_rounds>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_rounds.vhd".
+    Summary:
+	no macro.
+Unit <branch_rounds> synthesized.
+
+Synthesizing Unit <branch_round>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_round.vhd".
+    Summary:
+	no macro.
+Unit <branch_round> synthesized.
+
+Synthesizing Unit <step_round>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\step_round.vhd".
+    Summary:
+Unit <step_round> synthesized.
+
+Synthesizing Unit <L_function>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\L_function.vhd".
+    Summary:
+Unit <L_function> synthesized.
+
+Synthesizing Unit <decrypt>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\decrypt.vhd".
+    Found 128-bit register for signal <pt>.
+    Found 6-bit register for signal <address>.
+    Found 128-bit register for signal <key32>.
+    Found 1-bit register for signal <begin_save>.
+    Found 128-bit register for signal <key_write>.
+    Found 4-bit register for signal <round>.
+    Found 128-bit register for signal <key_0_in>.
+    Found 128-bit register for signal <key_1_in>.
+    Found 128-bit register for signal <key_2_in>.
+    Found 128-bit register for signal <key_3_in>.
+    Found 128-bit register for signal <text_state_1>.
+    Found 6-bit register for signal <read_address>.
+    Found 1-bit register for signal <getting_keys>.
+    Found 2-bit register for signal <my_counter>.
+    Found 2-bit adder for signal <my_counter[1]_GND_13_o_add_1_OUT> created at line 1241.
+    Found 6-bit adder for signal <address[5]_GND_13_o_add_2_OUT> created at line 1241.
+    Found 6-bit adder for signal <read_address[5]_GND_13_o_add_25_OUT> created at line 1241.
+    Found 6-bit adder for signal <read_address[5]_GND_13_o_add_27_OUT> created at line 1241.
+    Found 6-bit adder for signal <read_address[5]_GND_13_o_add_29_OUT> created at line 1241.
+    Found 4-bit adder for signal <round[3]_GND_13_o_add_32_OUT> created at line 1241.
+    Found 6-bit subtractor for signal <GND_13_o_GND_13_o_sub_34_OUT<5:0>> created at line 1308.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <ram>, simulation mismatch.
+    Found 33x128-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 128-bit 4-to-1 multiplexer for signal <key_write[127]_key_state[127]_mux_15_OUT> created at line 147.
+    Summary:
+	inferred   4 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 1044 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <decrypt> synthesized.
+
+Synthesizing Unit <branch_rounds_inv>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_rounds_inv.vhd".
+    Summary:
+	no macro.
+Unit <branch_rounds_inv> synthesized.
+
+Synthesizing Unit <L_inv_function>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\L_inv_function.vhd".
+    Summary:
+Unit <L_inv_function> synthesized.
+
+Synthesizing Unit <branch_round_inv>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\branch_round_inv.vhd".
+    Summary:
+	no macro.
+Unit <branch_round_inv> synthesized.
+
+Synthesizing Unit <step_round_inv>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\step_round_inv.vhd".
+    Summary:
+Unit <step_round_inv> synthesized.
+
+Synthesizing Unit <A_inv_function>.
+    Related source file is "C:\Users\Lucas Futch\Documents\sparx_vhdl\sparx\A_inv_function.vhd".
+    Found 16-bit subtractor for signal <left_mid> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <A_inv_function> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 33x128-bit dual-port RAM                              : 4
+# Adders/Subtractors                                   : 103
+ 16-bit adder                                          : 72
+ 16-bit subtractor                                     : 16
+ 2-bit adder                                           : 4
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 8
+ 6-bit subtractor                                      : 1
+# Registers                                            : 27
+ 1-bit register                                        : 2
+ 128-bit register                                      : 17
+ 2-bit register                                        : 4
+ 4-bit register                                        : 2
+ 6-bit register                                        : 2
+# Latches                                              : 128
+ 1-bit latch                                           : 128
+# Multiplexers                                         : 140
+ 1-bit 2-to-1 multiplexer                              : 131
+ 128-bit 2-to-1 multiplexer                            : 5
+ 128-bit 4-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 124
+ 128-bit xor2                                          : 2
+ 16-bit xor2                                           : 112
+ 16-bit xor3                                           : 8
+ 16-bit xor4                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <decrypt>.
+The following registers are absorbed into counter <address>: 1 register on signal <address>.
+The following registers are absorbed into counter <round>: 1 register on signal <round>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <key_0_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <getting_keys>  | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <key_write>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to internal node          | low      |
+    |     addrB          | connected to signal <read_address>  |          |
+    |     doB            | connected to signal <key_0_in>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_ram1> will be implemented as a BLOCK RAM, absorbing the following register(s): <key_1_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <getting_keys>  | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <key_write>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to internal node          | low      |
+    |     addrB          | connected to signal <read_address[5]_GND_13_o_add_25_OUT> |          |
+    |     doB            | connected to signal <key_1_in>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_ram2> will be implemented as a BLOCK RAM, absorbing the following register(s): <key_2_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <getting_keys>  | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <key_write>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to internal node          | low      |
+    |     addrB          | connected to signal <read_address[5]_GND_13_o_add_27_OUT> |          |
+    |     doB            | connected to signal <key_2_in>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_ram3> will be implemented as a BLOCK RAM, absorbing the following register(s): <key_3_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <getting_keys>  | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <key_write>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 33-word x 128-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to internal node          | low      |
+    |     addrB          | connected to signal <read_address[5]_GND_13_o_add_29_OUT> |          |
+    |     doB            | connected to signal <key_3_in>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <decrypt> synthesized (advanced).
+
+Synthesizing (advanced) Unit <encrypt>.
+The following registers are absorbed into counter <round>: 1 register on signal <round>.
+The following registers are absorbed into counter <my_counter>: 1 register on signal <my_counter>.
+Unit <encrypt> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 33x128-bit dual-port block RAM                        : 4
+# Adders/Subtractors                                   : 97
+ 16-bit adder                                          : 72
+ 16-bit subtractor                                     : 16
+ 2-bit adder                                           : 3
+ 6-bit adder                                           : 3
+ 6-bit adder carry in                                  : 2
+ 6-bit subtractor                                      : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 1678
+ Flip-Flops                                            : 1678
+# Multiplexers                                         : 140
+ 1-bit 2-to-1 multiplexer                              : 131
+ 128-bit 2-to-1 multiplexer                            : 5
+ 128-bit 4-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 124
+ 128-bit xor2                                          : 2
+ 16-bit xor2                                           : 112
+ 16-bit xor3                                           : 8
+ 16-bit xor4                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <read_address_0> has a constant value of 0 in block <decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <read_address_1> has a constant value of 0 in block <decrypt>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <sparx_module> ...
+
+Optimizing unit <encrypt> ...
+
+Optimizing unit <decrypt> ...
+WARNING:Xst:1293 - FF/Latch <read_address_5> has a constant value of 0 in block <decrypt>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <encrypt_module/my_counter_0> in Unit <sparx_module> is equivalent to the following FF/Latch, which will be removed : <encrypt_module/key_schedule_0/key_round_0> 
+INFO:Xst:2261 - The FF/Latch <encrypt_module/my_counter_1> in Unit <sparx_module> is equivalent to the following FF/Latch, which will be removed : <encrypt_module/key_schedule_0/key_round_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sparx_module, actual ratio is 45.
+FlipFlop decrypt_module/round_0 has been replicated 1 time(s)
+FlipFlop decrypt_module/round_1 has been replicated 1 time(s)
+FlipFlop decrypt_module/round_2 has been replicated 1 time(s)
+FlipFlop decrypt_module/round_3 has been replicated 1 time(s)
+FlipFlop encrypt_module/round_0 has been replicated 1 time(s)
+FlipFlop encrypt_module/round_1 has been replicated 1 time(s)
+FlipFlop encrypt_module/round_2 has been replicated 1 time(s)
+FlipFlop encrypt_module/round_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1697
+ Flip-Flops                                            : 1697
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sparx_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6130
+#      GND                         : 1
+#      INV                         : 7
+#      LUT2                        : 1158
+#      LUT3                        : 301
+#      LUT4                        : 475
+#      LUT5                        : 716
+#      LUT6                        : 991
+#      MUXCY                       : 1200
+#      VCC                         : 1
+#      XORCY                       : 1280
+# FlipFlops/Latches                : 1825
+#      FD                          : 2
+#      FDE                         : 1677
+#      FDRE                        : 18
+#      LD_1                        : 128
+# RAMS                             : 16
+#      RAMB8BWER                   : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1825  out of  18224    10%  
+ Number of Slice LUTs:                 3648  out of   9112    40%  
+    Number used as Logic:              3648  out of   9112    40%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3864
+   Number with an unused Flip Flop:    2039  out of   3864    52%  
+   Number with an unused LUT:           216  out of   3864     5%  
+   Number of fully used LUT-FF pairs:  1609  out of   3864    41%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     32    25%  
+    Number using Block RAM only:          8
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+reset                              | NONE(output_text_126)       | 128   |
+clk                                | NONE(encrypt_module/round_3)| 1713  |
+-----------------------------------+-----------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 13.437ns (Maximum Frequency: 74.420MHz)
+   Minimum input arrival time before clock: 10.644ns
+   Maximum output required time after clock: 0.581ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.437ns (frequency: 74.420MHz)
+  Total number of paths / destination ports: 1071061796 / 4012
+-------------------------------------------------------------------------
+Delay:               13.437ns (Levels of Logic = 53)
+  Source:            decrypt_module/round_3_1 (FF)
+  Destination:       decrypt_module/text_state_1_54 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: decrypt_module/round_3_1 to decrypt_module/text_state_1_54
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.525   1.252  decrypt_module/round_3_1 (decrypt_module/round_3_1)
+     LUT4:I0->O           11   0.254   1.039  decrypt_module/PWR_13_o_round[3]_equal_50_o<3>1_6 (decrypt_module/PWR_13_o_round[3]_equal_50_o<3>1_4)
+     LUT4:I3->O            7   0.254   1.340  decrypt_module/Mmux_text_state641 (decrypt_module/text_state<41>)
+     LUT6:I1->O            1   0.254   0.682  decrypt_module/branch/L_out<49>1 (decrypt_module/branch/L_out<49>)
+     LUT2:I1->O            1   0.254   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_lut<1> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<1> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<2> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<3> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<13> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<14> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<14>)
+     XORCY:CI->O           4   0.206   0.804  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_xor<15> (decrypt_module/branch/round_2/step_0/x0_afterA<6>)
+     LUT2:I1->O            1   0.254   0.681  decrypt_module/branch/round_2/step_0/Mxor_x0_out_6_xo<0>1 (decrypt_module/branch/round_2/step_0_x0<6>)
+     MUXCY:DI->O           1   0.181   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<12>)
+     XORCY:CI->O           4   0.206   0.912  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_xor<13> (decrypt_module/branch/round_2/step_1/x0_afterA<4>)
+     LUT6:I4->O            1   0.250   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_lut<4> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<12>)
+     XORCY:CI->O           4   0.206   0.912  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_xor<13> (decrypt_module/branch/round_2/step_2/x0_afterA<4>)
+     LUT6:I4->O            1   0.250   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_lut<4> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<13> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<14> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_xor<15> (decrypt_module/branch/round_2/step_3/x0_afterA<6>)
+     LUT2:I1->O            1   0.254   0.000  decrypt_module/branch/round_2/step_3/Mxor_x0_out_6_xo<0>1 (decrypt_module/branch_out<54>)
+     FDE:D                     0.074          decrypt_module/text_state_1_54
+    ----------------------------------------
+    Total                     13.437ns (5.133ns logic, 8.304ns route)
+                                       (38.2% logic, 61.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
+  Total number of paths / destination ports: 256 / 128
+-------------------------------------------------------------------------
+Offset:              0.746ns (Levels of Logic = 1)
+  Source:            sel (PAD)
+  Destination:       output_text_126 (LATCH)
+  Destination Clock: reset rising
+
+  Data Path: sel to output_text_126
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            1   0.254   0.000  Mmux_output_text[127]_text_state_enc[127]_MUX_149_o1 (output_text[127]_text_state_enc[127]_MUX_149_o)
+     LD_1:D                    0.036          output_text_127
+    ----------------------------------------
+    Total                      0.746ns (0.746ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 212994112 / 2499
+-------------------------------------------------------------------------
+Offset:              10.644ns (Levels of Logic = 52)
+  Source:            input_text<41> (PAD)
+  Destination:       decrypt_module/text_state_1_54 (FF)
+  Destination Clock: clk rising
+
+  Data Path: input_text<41> to decrypt_module/text_state_1_54
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            7   0.254   1.340  decrypt_module/Mmux_text_state641 (decrypt_module/text_state<41>)
+     LUT6:I1->O            1   0.254   0.682  decrypt_module/branch/L_out<49>1 (decrypt_module/branch/L_out<49>)
+     LUT2:I1->O            1   0.254   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_lut<1> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<1> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<2> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<3> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<13> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<14> (decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_cy<14>)
+     XORCY:CI->O           4   0.206   0.804  decrypt_module/branch/round_2/step_0/A_inv/Msub_left_mid_xor<15> (decrypt_module/branch/round_2/step_0/x0_afterA<6>)
+     LUT2:I1->O            1   0.254   0.681  decrypt_module/branch/round_2/step_0/Mxor_x0_out_6_xo<0>1 (decrypt_module/branch/round_2/step_0_x0<6>)
+     MUXCY:DI->O           1   0.181   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_cy<12>)
+     XORCY:CI->O           4   0.206   0.912  decrypt_module/branch/round_2/step_1/A_inv/Msub_left_mid_xor<13> (decrypt_module/branch/round_2/step_1/x0_afterA<4>)
+     LUT6:I4->O            1   0.250   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_lut<4> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_cy<12>)
+     XORCY:CI->O           4   0.206   0.912  decrypt_module/branch/round_2/step_2/A_inv/Msub_left_mid_xor<13> (decrypt_module/branch/round_2/step_2/x0_afterA<4>)
+     LUT6:I4->O            1   0.250   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_lut<4> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<4> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<5> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<6> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<7> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<8> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<9> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<10> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<11> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<12> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<13> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<14> (decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  decrypt_module/branch/round_2/step_3/A_inv/Msub_left_mid_xor<15> (decrypt_module/branch/round_2/step_3/x0_afterA<6>)
+     LUT2:I1->O            1   0.254   0.000  decrypt_module/branch/round_2/step_3/Mxor_x0_out_6_xo<0>1 (decrypt_module/branch_out<54>)
+     FDE:D                     0.074          decrypt_module/text_state_1_54
+    ----------------------------------------
+    Total                     10.644ns (4.631ns logic, 6.013ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              0.581ns (Levels of Logic = 0)
+  Source:            output_text_127 (LATCH)
+  Destination:       output_text<127> (PAD)
+  Source Clock:      reset rising
+
+  Data Path: output_text_127 to output_text<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             0   0.581   0.000  output_text_127 (output_text_127)
+    ----------------------------------------
+    Total                      0.581ns (0.581ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   13.437|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.912|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.26 secs
+ 
+--> 
+
+Total memory usage is 434064 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  140 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

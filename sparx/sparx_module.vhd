@@ -58,13 +58,17 @@ end component decrypt;
 
 signal encryption_en : STD_LOGIC;
 signal decryption_en : STD_LOGIC;
+signal text_state_enc : STD_LOGIC_VECTOR(127 downto 0);
+signal text_state_dec : STD_LOGIC_VECTOR(127 downto 0);
+
+
 
 begin
 
-encrypt_module : encrypt PORT MAP (input_text, master_key, clk, encryption_en, output_text);
-decrypt_module : decrypt PORT MAP (input_text, master_key, clk, decryption_en, output_text);
+encrypt_module : encrypt PORT MAP (input_text, master_key, clk, encryption_en, text_state_enc);
+decrypt_module : decrypt PORT MAP (input_text, master_key, clk, decryption_en, text_state_dec);
 
-sparx_module_process_select: process(clk)
+sparx_module_process_select: process(clk, reset, sel)
 begin
 
 	if reset = '1' then
@@ -74,9 +78,11 @@ begin
 		if sel = '0' then
 			encryption_en <= '1';
 			decryption_en <= '0';
+			output_text <= text_state_enc;
 		elsif sel = '1' then
 			encryption_en <= '0';
 			decryption_en <= '1';
+			output_text <= text_state_dec;
 		else
 			encryption_en <= '0';
 			decryption_en <= '0';

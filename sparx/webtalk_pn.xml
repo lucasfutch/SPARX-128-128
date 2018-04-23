@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Apr 14 17:12:36 2018">
+<application name="pn" timeStamp="Mon Apr 23 12:03:58 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="BBAFEFCE755A435C8013BF2A3E8E8492" type="project"/>
-<property name="ProjectIteration" value="1" type="project"/>
+<property name="ProjectIteration" value="2" type="project"/>
 <property name="ProjectFile" value="C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2018-03-05T15:56:15" type="project"/>
 </section>
@@ -18,7 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_ProjectDescription" value="`sparx-128/128" type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/branch_rounds_tb" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/sparx_module_tb" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -26,19 +26,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2018-03-05T15:56:15" type="design"/>
 <property name="PROP_intWbtProjectID" value="BBAFEFCE755A435C8013BF2A3E8E8492" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="2" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.branch_rounds_tb" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.sparx_module_tb" type="process"/>
+<property name="PROP_xilxMapTrimUnconnSig" value="false" type="process"/>
+<property name="PROP_xilxSynthAddIObuf" value="false" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
-<property name="PROP_DevDevice" value="xc6slx4" type="design"/>
+<property name="PROP_DevDevice" value="xc6slx16" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
-<property name="PROP_DevPackage" value="tqg144" type="design"/>
+<property name="PROP_DevPackage" value="csg324" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-2" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
-<property name="FILE_VHDL" value="17" type="source"/>
+<property name="FILE_VHDL" value="30" type="source"/>
 </section>
 </application>
 </document>

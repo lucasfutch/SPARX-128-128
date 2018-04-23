@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.xst" -ofn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.syr" 
+xst -intstyle ise -ifn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.xst" -ofn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.syr" 
+xst -intstyle ise -ifn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.xst" -ofn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.syr" 
+xst -intstyle ise -ifn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.xst" -ofn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.syr" 
+netgen -intstyle ise -ar Structure -tm sparx_module -w -dir netgen/synthesis -ofmt vhdl -sim sparx_module.ngc sparx_module_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.xst" -ofn "C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/sparx_module.syr" 
+netgen -intstyle ise -ar Structure -tm sparx_module -w -dir netgen/synthesis -ofmt vhdl -sim sparx_module.ngc sparx_module_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 "sparx_module.ngc" sparx_module.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sparx_module_map.ncd sparx_module.ngd sparx_module.pcf 
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -u -lc off -power off -o sparx_module_map.ncd sparx_module.ngd sparx_module.pcf 
+par -w -intstyle ise -ol high -mt off sparx_module_map.ncd sparx_module.ncd sparx_module.pcf 
