@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-04-23T11:52:03</DateModified>
+  <DateModified>2018-04-24T13:40:53</DateModified>
   <ModuleName>sparx_module</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-04-23T12:04:40</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx/iseconfig/sparx_module.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Lucas Futch/Documents/sparx_vhdl/sparx\</ImplementationReportsDirectory>
   <DateInitialized>2018-04-23T01:27:59</DateInitialized>

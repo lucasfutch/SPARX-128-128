@@ -68,11 +68,6 @@ signal key_1_out : STD_LOGIC_VECTOR(127 downto 0);
 signal key_2_out : STD_LOGIC_VECTOR(127 downto 0);
 signal key_3_out : STD_LOGIC_VECTOR(127 downto 0);
 
-signal key_0_in : STD_LOGIC_VECTOR(127 downto 0);
-signal key_1_in : STD_LOGIC_VECTOR(127 downto 0);
-signal key_2_in : STD_LOGIC_VECTOR(127 downto 0);
-signal key_3_in : STD_LOGIC_VECTOR(127 downto 0);
-
 signal text_state : STD_LOGIC_VECTOR(127 downto 0);-- := x"00000000000000000000000000000000";
 signal text_state_1 : STD_LOGIC_VECTOR(127 downto 0);-- := x"00000000000000000000000000000000";
 
@@ -88,7 +83,6 @@ begin
 key_schedule_0 : key_schedule PORT MAP(key_state, round, clk, en, key_0_out, key_1_out, key_2_out, key_3_out);
 branch : branch_rounds PORT MAP(text_state, key_state, key_0_out, key_1_out, key_2_out, branch_out);
 
-
 encryption_process_round_count: process(clk)
 begin
 
@@ -99,10 +93,6 @@ begin
 			
 			
 			if my_counter = "11" then	
-			
-				key_1_in <= key_0_out;
-				key_2_in <= key_1_out;
-				key_3_in <= key_2_out;
 				text_state_1 <= branch_out;
 				
 				round <= STD_LOGIC_VECTOR(unsigned(round) + 1); -- increase round by one						
@@ -121,10 +111,6 @@ with round select key_state <=
 	key_master when "0000",
 	key_3_out when others;
 	
---with round select key_0_in <=
---	key_master when "000",
---	key_0_out when others;
-
 with round select ct <= 
 	text_state XOR key_3_out when "1000",
 	text_state when others;
