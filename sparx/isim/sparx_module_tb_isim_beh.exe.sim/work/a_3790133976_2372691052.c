@@ -336,7 +336,7 @@ LAB36:    xsi_set_current_line(123, ng0);
     *((unsigned char *)t7) = (unsigned char)2;
     xsi_driver_first_trans_fast(t2);
     xsi_set_current_line(124, ng0);
-    t3 = (580 * 1000LL);
+    t3 = (650 * 1000LL);
     t2 = (t0 + 3408);
     xsi_process_wait(t2, t3);
 

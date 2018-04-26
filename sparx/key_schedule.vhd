@@ -92,6 +92,8 @@ begin
 				key_round <= "00";
 				--keys_ready <= '1';
 			end if;
+		else
+			key_round <= "00";
 		end if;
 	end if;
 		

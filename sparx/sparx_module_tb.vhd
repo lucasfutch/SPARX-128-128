@@ -121,7 +121,7 @@ BEGIN
 		
 		wait for 10 ns;
 		reset <= '0';		
-		wait for 580 ns;
+		wait for 650 ns;
 		
 		pt_exp := output_text;
 		assert pt_exp = x"0123456789abcdeffedcba9876543210"

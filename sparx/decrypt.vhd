@@ -166,7 +166,7 @@ begin
 				key_3_in <= ram(to_integer(unsigned(read_address) + 3));
 				
 				-- use four keys in order each round
-				if my_counter = "10" then	
+				if my_counter = "11" then	
 					text_state_1 <= branch_out;
 					round <= STD_LOGIC_VECTOR(unsigned(round) + 1); 				
 					my_counter <= "00";

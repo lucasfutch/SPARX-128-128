@@ -73,13 +73,13 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encrypt_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="encrypt_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="encrypt_summary.xml"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="encrypt_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="encrypt_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="encrypt_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="encrypt_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encrypt_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="key_perm.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="key_perm_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="key_schedule.cmd_log"/>
@@ -129,7 +129,9 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sparx_module_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="sparx_module_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="sparx_module_summary.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sparx_module_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sparx_module_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="sparx_module_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sparx_module_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="sparx_module_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sparx_module_xst.xrpt"/>
@@ -142,11 +144,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1524238467" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1524238467">
+    <transform xil_pn:end_ts="1524564272" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1524564272">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524558647" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1524558647">
+    <transform xil_pn:end_ts="1524732806" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1524732806">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="A_function.vhd"/>
@@ -180,25 +182,21 @@
       <outfile xil_pn:name="step_round_inv_tb.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1524558569" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2829917191046805698" xil_pn:start_ts="1524558569">
+    <transform xil_pn:end_ts="1524732683" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2829917191046805698" xil_pn:start_ts="1524732683">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524558569" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8153490743748614076" xil_pn:start_ts="1524558569">
+    <transform xil_pn:end_ts="1524732683" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8153490743748614076" xil_pn:start_ts="1524732683">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524471047" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1115933868447772350" xil_pn:start_ts="1524471047">
+    <transform xil_pn:end_ts="1524564272" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1115933868447772350" xil_pn:start_ts="1524564272">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524558589" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1524558589">
+    <transform xil_pn:end_ts="1524732806" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1524732806">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="A_function.vhd"/>
       <outfile xil_pn:name="A_function_tb.vhd"/>
       <outfile xil_pn:name="A_inv_function.vhd"/>
@@ -230,20 +228,22 @@
       <outfile xil_pn:name="step_round_inv_tb.vhd"/>
       <outfile xil_pn:name="step_round_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1524558591" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4807294513945769308" xil_pn:start_ts="1524558589">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1524732812" xil_pn:in_ck="940888877630996319" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4807294513945769308" xil_pn:start_ts="1524732806">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="sparx_module_tb_beh.prj"/>
+      <outfile xil_pn:name="sparx_module_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1524503006" xil_pn:in_ck="-9029651226746248462" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3765983817053961395" xil_pn:start_ts="1524503005">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1524732813" xil_pn:in_ck="-9029651226746248462" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7897920893155908855" xil_pn:start_ts="1524732812">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="sparx_module_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1523707624" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1523707624">
       <status xil_pn:value="SuccessfullyRun"/>

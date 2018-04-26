@@ -97,11 +97,11 @@ BEGIN
 		
 		en <= '1';
 		
-		-- 57 clock cycles for decrypt to be done
-		wait for 570 ns;
+		-- 65 clock cycles for decrypt to be done
+		wait for 650 ns;
 		
 		pt_exp := pt;
-		assert pt_exp = x"1123456789abcdeffedcba9876543210"
+		assert pt_exp = x"0123456789abcdeffedcba9876543210"
 		report "Unexpected Result for pt" 
 		severity error;
 		
